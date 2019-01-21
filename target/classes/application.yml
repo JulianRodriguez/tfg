@@ -1,0 +1,47 @@
+spring:
+  thymeleaf:
+    enabled: false
+  profile: local
+  datasource:
+    url: jdbc:mysql://localhost:33060/tfg?useSSL=false
+    username: ubuntuserver
+    password: juliansean
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    time-zone: UTC
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+#      ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false # property to avoid clob warning
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # property to avoid clob warning
+
+
+#redis:
+#  host: localhost
+#  port: 6379
+#  pass:
+#---
+#
+#spring:
+#  profiles: container
+#  datasource:
+#    url: jdbc:postgresql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DB}
+#    username: ${DATABASE_USER}
+#    password: ${DATABASE_PASSWORD}
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        temp:
+#          use_jdbc_metadata_defaults: false
+#    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+#redis:
+#  host: ${REDIS_HOST}
+#  port: ${REDIS_PORT}
+#  pass: ${REDIS_PASS}
