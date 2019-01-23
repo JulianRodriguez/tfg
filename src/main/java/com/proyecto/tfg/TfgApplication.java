@@ -27,33 +27,39 @@ public class TfgApplication {
 								  UserDAO userDAO) {
 		return args -> {
 
-			//Roles
+			//Puede hacer todo
 			Role r1 = new Role();
 			r1.setName("ADMIN");
 			List<Privilege> apr1 = new ArrayList<>();
-			
+
+			//podrá crud de sus platos
 			Role r2 = new Role();
-			r2.setName("SUPPORT");
+			r2.setName("RESTAURANT");
 			List<Privilege> apr2 = new ArrayList<>();
+
+			//Un usuario solo podra leer un plato
+			Role r3 = new Role();
+			r3.setName("USER");
+			List<Privilege> apr3 = new ArrayList<>();
 			
 			//Privileges
 			Privilege p1 = new Privilege();
-			p1.setName("GET_COMPANY");
+			p1.setName("GET_RESTAURANT");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
 			apr2.add(p1);
 			p1 = new Privilege();
-			p1.setName("POST_COMPANY");
+			p1.setName("POST_RESTAURANT");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
 			apr2.add(p1);
 			p1 = new Privilege();
-			p1.setName("PUT_COMPANY");
+			p1.setName("PUT_RESTAURANT");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
 			apr2.add(p1);
 			p1 = new Privilege();
-			p1.setName("DELETE_COMPANY");
+			p1.setName("DELETE_RESTAURANT");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
 			
@@ -75,165 +81,6 @@ public class TfgApplication {
 			apr1.add(p1);
 			
 			p1 = new Privilege();
-			p1.setName("GET_STORE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			apr2.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_STORE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			apr2.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_STORE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			apr2.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_STORE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
-			p1 = new Privilege();
-			p1.setName("GET_COMPANY_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_COMPANY_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_COMPANY_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_COMPANY_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
-			p1 = new Privilege();
-			p1.setName("GET_CONTRACT");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_CONTRACT");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_CONTRACT");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_CONTRACT");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
-			p1 = new Privilege();
-			p1.setName("GET_CONTRACT_LINE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_CONTRACT_LINE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_CONTRACT_LINE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_CONTRACT_LINE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
-			p1 = new Privilege();
-			p1.setName("GET_CONTRACT_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_CONTRACT_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_CONTRACT_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_CONTRACT_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
-			p1 = new Privilege();
-			p1.setName("GET_EMPLOYEE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			apr2.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_EMPLOYEE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			apr2.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_EMPLOYEE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			apr2.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_EMPLOYEE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
-			p1 = new Privilege();
-			p1.setName("GET_DONGLE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_DONGLE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_DONGLE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_DONGLE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
-			p1 = new Privilege();
-			p1.setName("GET_DONGLE_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_DONGLE_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_DONGLE_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_DONGLE_TYPE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
-			p1 = new Privilege();
-			p1.setName("GET_POPULATION");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_POPULATION");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_POPULATION");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_POPULATION");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
-			p1 = new Privilege();
 			p1.setName("GET_PRIVILEGE");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
@@ -249,24 +96,7 @@ public class TfgApplication {
 			p1.setName("DELETE_PRIVILEGE");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
-			
-			p1 = new Privilege();
-			p1.setName("GET_PROVINCE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("POST_PROVINCE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("PUT_PROVINCE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			p1 = new Privilege();
-			p1.setName("DELETE_PROVINCE");
-			privilegeDAO.save(p1);
-			apr1.add(p1);
-			
+
 			p1 = new Privilege();
 			p1.setName("GET_ROLE");
 			privilegeDAO.save(p1);

@@ -1121,134 +1121,134 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="274" name="id_product">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="285" parent="274" name="UK_bcuaj97y3iu3t2vj26jg6hijj">
+    <index id="284" parent="274" name="UK_bcuaj97y3iu3t2vj26jg6hijj">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="286" parent="274" name="FK2p47i726165jv22mrk4o9qei5">
-      <ColNames>id_product</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="287" parent="274" name="PRIMARY">
+    <key id="285" parent="274" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_ingredient</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="288" parent="274" name="UK_bcuaj97y3iu3t2vj26jg6hijj">
+    <key id="286" parent="274" name="UK_bcuaj97y3iu3t2vj26jg6hijj">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>UK_bcuaj97y3iu3t2vj26jg6hijj</UnderlyingIndexName>
     </key>
-    <foreign-key id="289" parent="274" name="FK2p47i726165jv22mrk4o9qei5">
-      <ColNames>id_product</ColNames>
-      <RefSchemaName>tfg</RefSchemaName>
-      <RefTableName>product</RefTableName>
-      <RefColNames>id_product</RefColNames>
-    </foreign-key>
-    <column id="290" parent="275" name="id_privilege">
+    <column id="287" parent="275" name="id_privilege">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="275" name="name">
+    <column id="288" parent="275" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="292" parent="275" name="UK_h7iwbdg4ev8mgvmij76881tx8">
+    <index id="289" parent="275" name="UK_h7iwbdg4ev8mgvmij76881tx8">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="293" parent="275" name="PRIMARY">
+    <key id="290" parent="275" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_privilege</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="294" parent="275" name="UK_h7iwbdg4ev8mgvmij76881tx8">
+    <key id="291" parent="275" name="UK_h7iwbdg4ev8mgvmij76881tx8">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>UK_h7iwbdg4ev8mgvmij76881tx8</UnderlyingIndexName>
     </key>
-    <column id="295" parent="276" name="id_product">
+    <column id="292" parent="276" name="id_product">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="276" name="description">
+    <column id="293" parent="276" name="description">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="276" name="name">
+    <column id="294" parent="276" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="276" name="id_restaurant">
+    <column id="295" parent="276" name="id_restaurant">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="299" parent="276" name="FKbidbhnk75ulk4aw1rpoqdto75">
+    <index id="296" parent="276" name="FKbidbhnk75ulk4aw1rpoqdto75">
       <ColNames>id_restaurant</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="300" parent="276" name="PRIMARY">
+    <key id="297" parent="276" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_product</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="301" parent="276" name="FKbidbhnk75ulk4aw1rpoqdto75">
+    <foreign-key id="298" parent="276" name="FKbidbhnk75ulk4aw1rpoqdto75">
       <ColNames>id_restaurant</ColNames>
       <RefSchemaName>tfg</RefSchemaName>
       <RefTableName>restaurant</RefTableName>
       <RefColNames>id_restaurant</RefColNames>
     </foreign-key>
-    <column id="302" parent="277" name="id_restaurant">
+    <column id="299" parent="277" name="id_restaurant">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="277" name="description_restaurant">
+    <column id="300" parent="277" name="description_restaurant">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="277" name="name_restaurant">
+    <column id="301" parent="277" name="name_restaurant">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="305" parent="277" name="UK_tfjdkn8cg11gcec9al9jqrd1y">
+    <column id="302" parent="277" name="id_user">
+      <Position>4</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="303" parent="277" name="UK_tfjdkn8cg11gcec9al9jqrd1y">
       <ColNames>name_restaurant</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="306" parent="277" name="PRIMARY">
+    <index id="304" parent="277" name="FKkkgdwl9as69x7sk2u4q4nclmm">
+      <ColNames>id_user</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="305" parent="277" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_restaurant</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="307" parent="277" name="UK_tfjdkn8cg11gcec9al9jqrd1y">
+    <key id="306" parent="277" name="UK_tfjdkn8cg11gcec9al9jqrd1y">
       <ColNames>name_restaurant</ColNames>
       <UnderlyingIndexName>UK_tfjdkn8cg11gcec9al9jqrd1y</UnderlyingIndexName>
     </key>
+    <foreign-key id="307" parent="277" name="FKkkgdwl9as69x7sk2u4q4nclmm">
+      <ColNames>id_user</ColNames>
+      <RefSchemaName>tfg</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id_user</RefColNames>
+    </foreign-key>
     <column id="308" parent="278" name="id_role">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
