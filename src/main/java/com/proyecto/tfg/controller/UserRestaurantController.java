@@ -27,19 +27,19 @@ public class UserRestaurantController {
         restaurantService.addtouser(idUser,restaurantDTO);
 //        userService.addrestaurant(idUser,createRestaurant);
     }
-    @GetMapping
-    public List<Restaurant> getAll() {
-        return restaurantService.getAll();
-    }
+//    @GetMapping
+//    public List<Restaurant> getAll() {
+//        return restaurantService.findAll();
+//    }
 
     @GetMapping("/{idRestaurant}")
-    public Restaurant getById(@PathVariable("idRestaurant") Integer idRestaurant) throws NotFoundException {
+    public Restaurant getById(@PathVariable("idRestaurant") Long idRestaurant) throws NotFoundException {
         return restaurantService.getRestaurant(idRestaurant);
     }
 
     @DeleteMapping("/{idRestaurant}")
     public void delete(@PathVariable("idUser") Long iduser,
-                                  @PathVariable("idRestaurant") Integer idrestaurant)throws NotFoundException
+                                  @PathVariable("idRestaurant") Long idrestaurant)throws NotFoundException
     {
         restaurantService.deleteRestaurant(iduser,idrestaurant);
     }

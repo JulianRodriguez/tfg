@@ -9,10 +9,10 @@ import java.util.Optional;
 
 public interface ProductService {
 
-    void addtorestaurant(Integer idRestaurant, ProductDTO productDTO)throws NotFoundException;
+    void addtorestaurant(Long idRestaurant, ProductDTO productDTO)throws NotFoundException;
     Product create(ProductDTO productDTO);
-    List<Product> getAll(Integer idRestaurant)throws NotFoundException;
-    Optional<Product> getById(Integer idProduct)throws NotFoundException;
+    List<Product> getAll(Long idRestaurant)throws NotFoundException;
+    Optional<Product> getById(Long idProduct)throws NotFoundException;
 
 
 }

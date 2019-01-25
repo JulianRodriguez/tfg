@@ -44,4 +44,10 @@ public class UserMapperImpl extends AbstractMapper<User, UserDTO> implements Use
 		return user;
 	}
 
+	@Override
+	public UserDTO modelToDto(User model) {
+		UserDTO dto = dozer.map(model, dtoClazz());
+		dto.setIdRole(model.getRole().getIdRole());
+		return dto;
+	}
 }

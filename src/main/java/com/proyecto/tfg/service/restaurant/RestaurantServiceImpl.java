@@ -7,14 +7,16 @@ import com.proyecto.tfg.exception.NotFoundException;
 import com.proyecto.tfg.model.Product;
 import com.proyecto.tfg.model.Restaurant;
 import com.proyecto.tfg.model.User;
+import com.proyecto.tfg.service.AbstractService;
 import com.proyecto.tfg.service.user.UserService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class RestaurantServiceImpl implements RestaurantService {
+public class RestaurantServiceImpl extends AbstractService<Restaurant, RestaurantDAO> implements RestaurantService {
 
     @Autowired
     private RestaurantDAO restaurantRepository;
@@ -26,17 +28,17 @@ public class RestaurantServiceImpl implements RestaurantService {
     UserService userService;
 
     @Override
-    public Restaurant getRestaurant(Integer idRest) throws NotFoundException {
+    public Restaurant getRestaurant(Long idRest) throws NotFoundException {
         return restaurantRepository.findById(idRest)
                 .orElseThrow(()->new NotFoundException(String.format("Restaurante no encontrado (%d)",idRest)));
 
     }
 
-    @Override
-    public List<Restaurant> getAll() {
-
-        return restaurantRepository.findAll();
-    }
+//    @Override
+//    public List<Restaurant> getAll() {
+//
+//        return restaurantRepository.findAll();
+//    }
 
     @Override
     public Restaurant create(RestaurantDTO Restdto) {
@@ -55,7 +57,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public void deleteRestaurant(Long idUser, Integer idRestaurant) throws NotFoundException {
+    public void deleteRestaurant(Long idUser, Long idRestaurant) throws NotFoundException {
 
         final User u = userService.getUser(idUser);
         final Restaurant r = restaurantService.getRestaurant(idRestaurant);
@@ -66,5 +68,24 @@ public class RestaurantServiceImpl implements RestaurantService {
     public void addtoproduct(Restaurant restaurant, Product product) {
         restaurant.getProduct().add(product);
         restaurantRepository.save(restaurant);
+    }
+
+    @Override
+    public Restaurant getAndCheck(Long id) throws NotFoundException {
+        return findById(id).orElseThrow(() -> new NotFoundException("El usuario no existe"));
+    }
+
+    @Override
+    public boolean isEqual(Restaurant u1, Restaurant u2) {
+        return StringUtils.equals(u1.getDescriptionRestaurant(), u2.getDescriptionRestaurant()) &&
+                StringUtils.equals(u1.getNameRestaurant(), u2.getNameRestaurant());
+    }
+
+    @Override
+    public void setValues(Restaurant to, Restaurant from) {
+        to.setDescriptionRestaurant(from.getDescriptionRestaurant());
+        to.setNameRestaurant(from.getNameRestaurant());
+        to.setProduct(from.getProduct());
+
     }
 }

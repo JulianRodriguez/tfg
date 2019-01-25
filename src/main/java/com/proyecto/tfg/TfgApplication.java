@@ -121,20 +121,25 @@ public class TfgApplication {
 			roleDAO.save(r2);
 
 			//Users
-			User orrequia = new User();
-			User valeria = new User();
-			
-			orrequia.setName("Francisco");
-			orrequia.setUsername("orrequia");
-			orrequia.setPassword(DigestUtils.sha1Hex("1234"));
-			orrequia.setRole(r1);
-			userDAO.save(orrequia);
-			
-			valeria.setName("Valeria");
-			valeria.setUsername("valeria");
-			valeria.setPassword(DigestUtils.sha1Hex("4321"));
-			valeria.setRole(r2);
-			userDAO.save(valeria);
+			User admin = new User();
+			User user = new User();
+
+			admin.setName("Julian Rodriguez Carave");
+			admin.setUsername("julito");
+			admin.setEmail("j@gmail.com");
+			admin.setPhone("667884995");
+			admin.setPassword(DigestUtils.sha1Hex("1234"));
+			admin.setRole(r1);
+			userDAO.save(admin);
+
+			user.setName("Sara Zar");
+			user.setUsername("sarita04");
+			user.setEmail("sar@gmail.com");
+			user.setPhone("435243124");
+			user.setPassword(DigestUtils.sha1Hex("1234"));
+			user.setRole(r2);
+			userDAO.save(user);
+
 
 
 		};

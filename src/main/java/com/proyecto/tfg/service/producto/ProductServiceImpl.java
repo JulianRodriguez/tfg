@@ -33,18 +33,18 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public List<Product> getAll(Integer idRestaurant)throws NotFoundException {
+    public List<Product> getAll(Long idRestaurant)throws NotFoundException {
         final Restaurant restaurant = restaurantService.getRestaurant(idRestaurant);
         return restaurant.getProduct();
     }
 
     @Override
-    public Optional<Product> getById(Integer idProduct) throws NotFoundException {
+    public Optional<Product> getById(Long idProduct) throws NotFoundException {
         return productRespository.findById(idProduct);
     }
 
     @Override
-    public void addtorestaurant(Integer idRestaurant, ProductDTO productDTO) throws NotFoundException {
+    public void addtorestaurant(Long idRestaurant, ProductDTO productDTO) throws NotFoundException {
         final Restaurant restaurant = restaurantService.getRestaurant(idRestaurant);
         final Product product = productService.create(productDTO);
         restaurantService.addtoproduct(restaurant,product);

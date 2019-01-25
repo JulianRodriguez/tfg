@@ -19,17 +19,17 @@ public class RestaurantProductController {
 
     @PostMapping
     public void create(@RequestBody ProductDTO productDTO,
-                       @PathVariable("idRestaurant") Integer idRestaurant )throws NotFoundException {
+                       @PathVariable("idRestaurant") Long idRestaurant )throws NotFoundException {
         productService.addtorestaurant(idRestaurant,productDTO);
     }
 
     @GetMapping
-    public List<Product> getAll(@PathVariable("idRestaurant") Integer idRestaurant)throws NotFoundException {
+    public List<Product> getAll(@PathVariable("idRestaurant") Long idRestaurant)throws NotFoundException {
         return productService.getAll(idRestaurant);
     }
 
     @GetMapping("/{idProduct}")
-    public Optional<Product> getById(@PathVariable("idProduct") Integer idProduct)throws NotFoundException{
+    public Optional<Product> getById(@PathVariable("idProduct") Long idProduct)throws NotFoundException{
         return productService.getById(idProduct);
     }
 

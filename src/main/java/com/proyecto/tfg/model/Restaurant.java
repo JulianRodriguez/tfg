@@ -13,7 +13,7 @@ public class Restaurant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idRestaurant;
+    private Long idRestaurant;
 
     @Column(unique= true,nullable = false)
     private String nameRestaurant;

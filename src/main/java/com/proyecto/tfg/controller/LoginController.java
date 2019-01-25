@@ -5,6 +5,9 @@ import java.util.Base64;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.proyecto.tfg.exception.NotFoundException;
+import com.proyecto.tfg.model.User;
+import com.proyecto.tfg.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -26,13 +29,16 @@ import com.proyecto.tfg.exception.InvalidRequestException;
 public class LoginController {
 
 	private static final Integer LONGTEXTBASIC = 5;
-	
+
+	@Autowired
+	UserService userService;
+
 	@Autowired
 	@Qualifier("authenticationManagerBean")
 	private AuthenticationManager authenticationManager;
 	
 	@PostMapping("/login")
-	public ConnectedDTO login(@RequestHeader("Authorization") String auth) throws UnsupportedEncodingException, InvalidRequestException {
+	public ConnectedDTO login(@RequestHeader("Authorization") String auth) throws UnsupportedEncodingException, InvalidRequestException, NotFoundException {
 		
 	    if (auth != null && auth.startsWith("Basic")) {
 	        String credentials = new String(Base64.getDecoder().decode(auth.substring(LONGTEXTBASIC).trim()), "UTF-8");
@@ -41,11 +47,13 @@ public class LoginController {
 	        if(values.length == 2) { 
 	        	final Authentication token = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(values[0], values[1]));
 	        	final String idSession = RequestContextHolder.currentRequestAttributes().getSessionId();
-	        	
+				User u = userService.getAndCheckByUsername(values[0]);
+
 	        	return ConnectedDTO.builder()
 	    				.username(values[0])
 	    				.grantedAuthorities(token.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
-	    				.idSession(idSession)
+						.rolename(u.getRole().getName())
+						.idSession(idSession)
 	    				.build();
 	        } else {
 	        	throw new InvalidRequestException("Petición de autorización incorrecto");

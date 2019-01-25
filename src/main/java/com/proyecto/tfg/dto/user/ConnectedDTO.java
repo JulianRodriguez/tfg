@@ -11,5 +11,6 @@ public class ConnectedDTO {
 
 	private String username;
 	private String idSession;
+	private String rolename;
 	private List<String> grantedAuthorities;
 }
