@@ -44,8 +44,8 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
     public Restaurant create(RestaurantDTO Restdto) {
 
         Restaurant restaurantCrear = new Restaurant();
-        restaurantCrear.setNameRestaurant(Restdto.getName());
-        restaurantCrear.setDescriptionRestaurant(Restdto.getDescription());
+        restaurantCrear.setNameRestaurant(Restdto.getNameRestaurant());
+        restaurantCrear.setDescriptionRestaurant(Restdto.getDescriptionRestaurant());
         return restaurantRepository.save(restaurantCrear);
     }
 

@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.proyecto.tfg.dao.PrivilegeDAO;
+import com.proyecto.tfg.dao.RestaurantDAO;
 import com.proyecto.tfg.dao.RoleDAO;
 import com.proyecto.tfg.dao.UserDAO;
 import com.proyecto.tfg.model.Privilege;
+import com.proyecto.tfg.model.Restaurant;
 import com.proyecto.tfg.model.Role;
 import com.proyecto.tfg.model.User;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -24,13 +26,14 @@ public class TfgApplication {
 	
 	@Bean
 	public CommandLineRunner demo(PrivilegeDAO privilegeDAO, RoleDAO roleDAO,
-								  UserDAO userDAO) {
+								  UserDAO userDAO, RestaurantDAO restaurantDAO) {
 		return args -> {
 
 			//Puede hacer todo
 			Role r1 = new Role();
 			r1.setName("ADMIN");
 			List<Privilege> apr1 = new ArrayList<>();
+
 
 			//podrá crud de sus platos
 			Role r2 = new Role();
@@ -124,6 +127,14 @@ public class TfgApplication {
 			User admin = new User();
 			User user = new User();
 
+			Restaurant restaurant = new Restaurant();
+			List<Restaurant> restaurants = new ArrayList<>();
+			restaurant.setNameRestaurant("La Pepa");
+			restaurant.setDescriptionRestaurant("Cerveza artesanal");
+//			restaurantDAO.save(restaurant);
+			restaurants.add(restaurant);
+			System.out.println(restaurants);
+
 			admin.setName("Julian Rodriguez Carave");
 			admin.setUsername("julito");
 			admin.setEmail("j@gmail.com");
@@ -138,6 +149,7 @@ public class TfgApplication {
 			user.setPhone("435243124");
 			user.setPassword(DigestUtils.sha1Hex("1234"));
 			user.setRole(r2);
+			user.setRestaurant(restaurants);
 			userDAO.save(user);
 
 

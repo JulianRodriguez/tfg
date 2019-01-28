@@ -9,7 +9,7 @@ import java.util.List;
 public class RestaurantDTO {
 
     private Long idRestaurant;
-    private String name;
-    private String description;
+    private String nameRestaurant;
+    private String descriptionRestaurant;
     private List<User> users;
 }

@@ -7,9 +7,7 @@ import com.proyecto.tfg.model.Restaurant;
 import com.proyecto.tfg.service.restaurant.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,7 +21,7 @@ public class RestaurantController {
     @Autowired
     RestaurantMapper restaurantMapper;
 
-
+    @GetMapping
     public List<RestaurantDTO> findAll(@RequestParam(defaultValue = "0", required= false ) Integer page,
                                        @RequestParam(defaultValue = "10", required= false ) Integer size) throws InvalidRequestException {
         final List<Restaurant> restaurants = restaurantService.findAll(PageRequest.of(page, size));
