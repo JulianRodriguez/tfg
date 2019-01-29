@@ -9,6 +9,7 @@ import lombok.Getter;
 @Builder
 public class ConnectedDTO {
 
+	private Long idUser;
 	private String username;
 	private String idSession;
 	private String rolename;

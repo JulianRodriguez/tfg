@@ -70,18 +70,22 @@ public class TfgApplication {
 			p1.setName("GET_USER");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
+			apr2.add(p1);
 			p1 = new Privilege();
 			p1.setName("POST_USER");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
+			apr2.add(p1);
 			p1 = new Privilege();
 			p1.setName("PUT_USER");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
+			apr2.add(p1);
 			p1 = new Privilege();
 			p1.setName("DELETE_USER");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
+			apr2.add(p1);
 			
 			p1 = new Privilege();
 			p1.setName("GET_PRIVILEGE");
@@ -128,11 +132,16 @@ public class TfgApplication {
 			User user = new User();
 
 			Restaurant restaurant = new Restaurant();
+			Restaurant restaurant2 = new Restaurant();
 			List<Restaurant> restaurants = new ArrayList<>();
+			List<Restaurant> restaurants2 = new ArrayList<>();
 			restaurant.setNameRestaurant("La Pepa");
 			restaurant.setDescriptionRestaurant("Cerveza artesanal");
+			restaurant2.setNameRestaurant("Rincon de Ana");
+			restaurant2.setDescriptionRestaurant("Comida artesanal");
 //			restaurantDAO.save(restaurant);
 			restaurants.add(restaurant);
+			restaurants2.add(restaurant2);
 			System.out.println(restaurants);
 
 			admin.setName("Julian Rodriguez Carave");
@@ -141,6 +150,7 @@ public class TfgApplication {
 			admin.setPhone("667884995");
 			admin.setPassword(DigestUtils.sha1Hex("1234"));
 			admin.setRole(r1);
+			admin.setRestaurant(restaurants2);
 			userDAO.save(admin);
 
 			user.setName("Sara Zar");

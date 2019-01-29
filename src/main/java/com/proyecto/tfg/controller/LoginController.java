@@ -50,6 +50,7 @@ public class LoginController {
 				User u = userService.getAndCheckByUsername(values[0]);
 
 	        	return ConnectedDTO.builder()
+						.idUser(u.getIdUser())
 	    				.username(values[0])
 	    				.grantedAuthorities(token.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
 						.rolename(u.getRole().getName())

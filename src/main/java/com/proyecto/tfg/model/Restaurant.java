@@ -10,6 +10,7 @@ import java.util.List;
 public class Restaurant {
 
     public static final String FIELD_PRODUCT = "idRestaurant";
+    public static final String FIELD_USER = "idRestaurant";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +27,7 @@ public class Restaurant {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = FIELD_PRODUCT, referencedColumnName = FIELD_PRODUCT)
     private List<Product> product;
+
 
 
 }

@@ -2,6 +2,7 @@ package com.proyecto.tfg.service.restaurant;
 
 
 import com.proyecto.tfg.dao.RestaurantDAO;
+import com.proyecto.tfg.dao.UserDAO;
 import com.proyecto.tfg.dto.restaurant.RestaurantDTO;
 import com.proyecto.tfg.exception.NotFoundException;
 import com.proyecto.tfg.model.Product;
@@ -11,6 +12,8 @@ import com.proyecto.tfg.service.AbstractService;
 import com.proyecto.tfg.service.user.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +23,9 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
 
     @Autowired
     private RestaurantDAO restaurantRepository;
+
+    @Autowired
+    private UserDAO userDAO;
 
     @Autowired
     RestaurantService restaurantService;
@@ -68,6 +74,12 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
     public void addtoproduct(Restaurant restaurant, Product product) {
         restaurant.getProduct().add(product);
         restaurantRepository.save(restaurant);
+    }
+
+    @Override
+    public List<Restaurant> findRestaurantbyiduser(Long id, Pageable p) throws NotFoundException {
+        User u = userService.getAndCheck(id);
+        return userDAO.findRestaurantbyiduser(id, PageRequest.of(p.getPageNumber(), p.getPageSize()));
     }
 
     @Override
