@@ -77,6 +77,7 @@ public class UserController {
 	@DeleteMapping("/{idUser}")
 	public void delete(@PathVariable("idUser") Long id, @RequestBody UserDTO dto) throws InvalidRequestException, NotFoundException {
 		final User user = userService.getAndCheck(id);
+        System.out.println(dto.getIdRole());
 		if(!userService.isEqual(userMapper.dtoToModel(dto), user)) 
 			throw new InvalidRequestException("El usuario recibido no coincide con el almacenado");
 		userService.delete(user);

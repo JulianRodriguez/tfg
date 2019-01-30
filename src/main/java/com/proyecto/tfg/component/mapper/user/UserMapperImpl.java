@@ -29,6 +29,18 @@ public class UserMapperImpl extends AbstractMapper<User, UserDTO> implements Use
 	
 	@Override
 	public User dtoToModel(UserPostDTO dto) throws NotFoundException {
+
+		System.out.println("En un lugar de la mancha");
+        System.out.println("id rol es:"+dto.getIdRole());
+        Role role = longToRole(dto.getIdRole());
+		return map(dto, role);
+	}
+
+	@Override
+	public User dtoToModel(UserDTO dto) throws NotFoundException {
+
+		System.out.println("En un lugar de la mancha");
+		System.out.println("id rol es:"+dto.getIdRole());
 		Role role = longToRole(dto.getIdRole());
 		return map(dto, role);
 	}
@@ -39,6 +51,12 @@ public class UserMapperImpl extends AbstractMapper<User, UserDTO> implements Use
 	}
 	
 	private User map(UserPostDTO dto, Role role) {
+		User user = dozer.map(dto, modelClazz());
+		user.setRole(role);
+		return user;
+	}
+	
+	private User map(UserDTO dto, Role role) {
 		User user = dozer.map(dto, modelClazz());
 		user.setRole(role);
 		return user;

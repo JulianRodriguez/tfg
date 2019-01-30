@@ -30,7 +30,7 @@ public class User implements UserDetails {
 	@Column
 	private String name;
 
-	@Column(unique=true, nullable=false)
+	@Column(unique=true,nullable=false)
 	private String email;
 	
 	@Column(unique=true)
