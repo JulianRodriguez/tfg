@@ -13,18 +13,20 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value= "/restaurant")
-public class RestaurantController {
+public class RestaurantController extends AbstractController<Restaurant, RestaurantDTO>{
 
-    @Autowired
-    RestaurantService restaurantService;
+//    @Autowired
+//    RestaurantService restaurantService;
+//
+//    @Autowired
+//    RestaurantMapper restaurantMapper;
+//
+//    @GetMapping
+//    public List<RestaurantDTO> findAll(@RequestParam(defaultValue = "0", required= false ) Integer page,
+//                                       @RequestParam(defaultValue = "10", required= false ) Integer size) throws InvalidRequestException {
+//        final List<Restaurant> restaurants = restaurantService.findAll(PageRequest.of(page, size));
+//        return restaurantMapper.modelToDto(restaurants);
+//    }
+//
 
-    @Autowired
-    RestaurantMapper restaurantMapper;
-
-    @GetMapping
-    public List<RestaurantDTO> findAll(@RequestParam(defaultValue = "0", required= false ) Integer page,
-                                       @RequestParam(defaultValue = "10", required= false ) Integer size) throws InvalidRequestException {
-        final List<Restaurant> restaurants = restaurantService.findAll(PageRequest.of(page, size));
-        return restaurantMapper.modelToDto(restaurants);
-    }
 }
