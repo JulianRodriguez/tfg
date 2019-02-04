@@ -1,11 +1,14 @@
 package com.proyecto.tfg.service.producto;
 
 import com.proyecto.tfg.dao.ProductDAO;
+import com.proyecto.tfg.dao.RestaurantDAO;
 import com.proyecto.tfg.dto.product.ProductDTO;
 import com.proyecto.tfg.exception.NotFoundException;
 import com.proyecto.tfg.model.Product;
 import com.proyecto.tfg.model.Restaurant;
+import com.proyecto.tfg.service.AbstractService;
 import com.proyecto.tfg.service.restaurant.RestaurantService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductServiceImpl implements ProductService{
+public class ProductServiceImpl extends AbstractService<Product, ProductDAO> implements ProductService{
 
     @Autowired
     ProductService productService;
@@ -50,5 +53,23 @@ public class ProductServiceImpl implements ProductService{
         restaurantService.addtoproduct(restaurant,product);
     }
 
+
+    @Override
+    public Product getAndCheck(Long id) throws NotFoundException {
+        return findById(id).orElseThrow(() -> new NotFoundException("El producto no existe"));
+    }
+
+    @Override
+    public boolean isEqual(Product u1, Product u2) {
+        return StringUtils.equals(u1.getName(), u2.getName()) &&
+                StringUtils.equals(u1.getDescription(), u2.getDescription());
+    }
+
+    @Override
+    public void setValues(Product to, Product from) {
+        to.setDescription(from.getDescription());
+        to.setName(from.getName());
+        to.setIdProduct(from.getIdProduct());
+    }
 
 }

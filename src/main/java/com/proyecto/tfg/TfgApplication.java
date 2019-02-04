@@ -7,10 +7,7 @@ import com.proyecto.tfg.dao.PrivilegeDAO;
 import com.proyecto.tfg.dao.RestaurantDAO;
 import com.proyecto.tfg.dao.RoleDAO;
 import com.proyecto.tfg.dao.UserDAO;
-import com.proyecto.tfg.model.Privilege;
-import com.proyecto.tfg.model.Restaurant;
-import com.proyecto.tfg.model.Role;
-import com.proyecto.tfg.model.User;
+import com.proyecto.tfg.model.*;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -144,7 +141,22 @@ public class TfgApplication {
 			restaurants2.add(restaurant2);
 			System.out.println(restaurants);
 
-			admin.setName("Julian Rodriguez Carave");
+
+			Product product = new Product();
+            Product product2 = new Product();
+            List<Product> prod1 = new ArrayList<>();
+            List<Product> prod2 = new ArrayList<>();
+            product.setDescription("Plato de arroz muy rico. Hecho en cai");
+            product.setName("Paella");
+            product2.setName("Hamburguesa de queso");
+            product2.setDescription("Famosa hamburguesa tipica de aqui");
+            prod1.add(product);
+            prod2.add(product2);
+
+            restaurant.setProduct(prod1);
+            restaurant2.setProduct(prod2);
+
+            admin.setName("Julian Rodriguez Carave");
 			admin.setUsername("julito");
 			admin.setEmail("j@gmail.com");
 			admin.setPhone("667884995");

@@ -44,7 +44,6 @@ public class RestaurantMapperImpl extends AbstractMapper<Restaurant, RestaurantD
     @Override
     public RestaurantDTO modelToDto(Restaurant model) {
         RestaurantDTO dto = dozer.map(model, dtoClazz());
-
         return dto;
     }
 }
