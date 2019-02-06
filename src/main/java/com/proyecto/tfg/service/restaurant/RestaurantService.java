@@ -18,5 +18,6 @@ public interface RestaurantService extends Service<Restaurant, Long> {
     void addtoproduct(Restaurant restaurant, Product product);
     List<Restaurant> findRestaurantbyiduser(Long id, Pageable p) throws NotFoundException;
 //    List<Product> getAllProduct(Restaurant r);
+    Long restaurantTotal();
 
 }

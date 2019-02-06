@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import com.proyecto.tfg.exception.NotFoundException;
 import com.proyecto.tfg.service.AbstractService;
 
+import java.util.List;
+
 @Service(value = "userService")
 public class UserServiceImpl extends AbstractService<User, UserDAO> implements UserService {
 
@@ -66,5 +68,10 @@ public class UserServiceImpl extends AbstractService<User, UserDAO> implements U
 		User u = getUser(idUser);
 		u.getRestaurant().add(r);
 		userDAO.save(u);
+	}
+
+	@Override
+	public Long usertotal(){
+		return userDAO.userTotales();
 	}
 }

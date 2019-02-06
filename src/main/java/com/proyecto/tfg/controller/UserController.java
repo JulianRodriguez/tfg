@@ -44,10 +44,19 @@ public class UserController {
 	@ApiResponses({ @ApiResponse(code = 200, response= UserDTO.class, message="All users"),
 					@ApiResponse(code = 401, response= ApiErrorDTO.class, message="Invalid Request")
 	})
-	public List<UserDTO> findAll(@RequestParam(defaultValue = "0", required= false ) Integer page, 
+	public List<UserDTO> findAll(@RequestParam(defaultValue = "0", required= false ) Integer page,
 							 @RequestParam(defaultValue = "10", required= false ) Integer size) throws InvalidRequestException {
 		final List<User> users = userService.findAll(PageRequest.of(page, size));
+		final Long totaldeUser = userService.usertotal();
+		System.out.println(totaldeUser);
+//		System.out.println(usuarios);
 		return userMapper.modelToDto(users);
+	}
+
+	@GetMapping("/total")
+	public Long findTotal() throws NotFoundException {
+		final Long totaldeUser = userService.usertotal();
+		return totaldeUser;
 	}
 	
 	@GetMapping("/{idUser}")

@@ -47,6 +47,11 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
     }
 
     @Override
+    public Long productTotal() {
+        return productRespository.productTotales();
+    }
+
+    @Override
     public void addtorestaurant(Long idRestaurant, ProductDTO productDTO) throws NotFoundException {
         final Restaurant restaurant = restaurantService.getRestaurant(idRestaurant);
         final Product product = productService.create(productDTO);

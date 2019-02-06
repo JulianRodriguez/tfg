@@ -20,4 +20,6 @@ public interface UserDAO extends GenericDAO<User> {
 	@Query(value = "select q from User as r join r.restaurant as q where r.idUser = :idUser")
 	List<Restaurant> findRestaurantbyiduser(@Param("idUser") Long idUser, Pageable p);
 
+	@Query(value = "select count(idUser) from User")
+	Long userTotales();
 }

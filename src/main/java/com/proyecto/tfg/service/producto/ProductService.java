@@ -14,6 +14,7 @@ public interface ProductService extends Service<Product, Long> {
     Product create(ProductDTO productDTO);
     List<Product> getAll(Long idRestaurant)throws NotFoundException;
     Optional<Product> getById(Long idProduct)throws NotFoundException;
+    Long productTotal();
 
 
 }

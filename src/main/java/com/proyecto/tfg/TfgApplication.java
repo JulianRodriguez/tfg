@@ -126,7 +126,7 @@ public class TfgApplication {
 
 			//Users
 			User admin = new User();
-			User user = new User();
+//			User user = new User();
 
 			Restaurant restaurant = new Restaurant();
 			Restaurant restaurant2 = new Restaurant();
@@ -165,6 +165,7 @@ public class TfgApplication {
 			admin.setRestaurant(restaurants2);
 			userDAO.save(admin);
 
+			User user = new User();
 			user.setName("Sara Zar");
 			user.setUsername("sarita04");
 			user.setEmail("sar@gmail.com");
@@ -173,6 +174,22 @@ public class TfgApplication {
 			user.setRole(r2);
 			user.setRestaurant(restaurants);
 			userDAO.save(user);
+
+			for(int i = 0; i<100 ; i++)
+			{
+				User userprueba = new User();
+				userprueba.setName("Paco"+i);
+				userprueba.setUsername("Paco"+i);
+				userprueba.setEmail("Paco@gmail.com"+i);
+				userprueba.setPhone("435243124"+i);
+				userprueba.setPassword(DigestUtils.sha1Hex("1234"+i));
+				userprueba.setRole(r2);
+				userDAO.save(userprueba);
+			}
+
+
+
+
 
 
 

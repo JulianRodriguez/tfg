@@ -12,12 +12,7 @@ import java.util.List;
 @Repository
 public interface RestaurantDAO extends GenericDAO<Restaurant> {
 
-//    @Modifying
-//    @Query(value = "INSERT INTO USER_RESTAURANT (question_id_question, answer_id_answer) VALUES (?1,?2)", nativeQuery = true)
-//    @Transactional
-//    public void addanswerquestion(@Param("idQuestion") Integer idCourse,@Param("idAnswer") Integer idUser);
-
-//   @Query(value = "SELECT q FROM Restaurant AS r join r.")
-//    List<Restaurant> findRestaurantbyiduser(@Param("idUser") Long id, Pageable p);
+    @Query(value = "select count(idRestaurant) from Restaurant ")
+    Long restaurantTotal();
 }
 

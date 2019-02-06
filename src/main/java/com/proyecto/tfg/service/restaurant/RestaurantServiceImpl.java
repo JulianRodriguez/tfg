@@ -83,6 +83,11 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
     }
 
     @Override
+    public Long restaurantTotal() {
+        return restaurantRepository.restaurantTotal();
+    }
+
+    @Override
     public Restaurant getAndCheck(Long id) throws NotFoundException {
         return findById(id).orElseThrow(() -> new NotFoundException("El usuario no existe"));
     }
