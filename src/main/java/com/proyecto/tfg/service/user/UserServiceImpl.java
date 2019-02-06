@@ -5,12 +5,14 @@ import com.proyecto.tfg.model.Restaurant;
 import com.proyecto.tfg.model.User;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.proyecto.tfg.exception.NotFoundException;
 import com.proyecto.tfg.service.AbstractService;
 
 import java.util.List;
+import java.util.Locale;
 
 @Service(value = "userService")
 public class UserServiceImpl extends AbstractService<User, UserDAO> implements UserService {
@@ -74,4 +76,14 @@ public class UserServiceImpl extends AbstractService<User, UserDAO> implements U
 	public Long usertotal(){
 		return userDAO.userTotales();
 	}
+
+	@Override
+	public List<User> findByName(String name, Pageable p) throws NotFoundException {
+		return userDAO.findByName(name.toLowerCase(Locale.getDefault()), p);
+	}
+
+//	@Override
+//	public List<User> findByName(String name) throws NotFoundException {
+//		return userDAO.findByName(name.toLowerCase(Locale.getDefault()));
+//	}
 }
