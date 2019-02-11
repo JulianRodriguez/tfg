@@ -53,6 +53,7 @@ public class UserController {
 			users = userService.findAll(PageRequest.of(page, size));
 		}
 		else{
+
 			System.out.println(searchName);
 			users = userService.findByName(searchName, PageRequest.of(page, size));
 		}
@@ -66,6 +67,12 @@ public class UserController {
 	public Long findTotal() throws NotFoundException {
 		final Long totaldeUser = userService.usertotal();
 		return totaldeUser;
+	}
+
+	@GetMapping("/searchTotal")
+	public Long findSearchTotal(@RequestParam(required = false) String searchName) throws NotFoundException {
+		final Long totaldeUserSearch = userService.userSearchTotal(searchName);
+		return totaldeUserSearch;
 	}
 	
 	@GetMapping("/{idUser}")

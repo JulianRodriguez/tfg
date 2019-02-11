@@ -78,6 +78,11 @@ public class UserServiceImpl extends AbstractService<User, UserDAO> implements U
 	}
 
 	@Override
+	public Long userSearchTotal(String name) {
+		return userDAO.userTotalesSearch(name);
+	}
+
+	@Override
 	public List<User> findByName(String name, Pageable p) throws NotFoundException {
 		return userDAO.findByName(name.toLowerCase(Locale.getDefault()), p);
 	}

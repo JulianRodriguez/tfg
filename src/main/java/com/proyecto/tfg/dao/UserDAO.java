@@ -23,6 +23,9 @@ public interface UserDAO extends GenericDAO<User> {
 	@Query(value = "select count(idUser) from User")
 	Long userTotales();
 
+	@Query(value = "select count(u) from User AS u where LOWER(u.name) LIKE %:name%")
+	Long userTotalesSearch(@Param("name") String name);
+
 	@Query(value = "select u from User AS u where LOWER(u.name) LIKE %:name%")
 	List<User> findByName (@Param("name") String name, Pageable pageable);
 }
