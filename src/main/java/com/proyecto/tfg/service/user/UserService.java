@@ -15,6 +15,7 @@ public interface UserService extends Service<User, Long> {
 	User getUser(Long idUser) throws NotFoundException;
 	void removeRestaurant(User u, Restaurant r);
 	Long usertotal();
+	Long userSearchTotal(String name);
 	List<User> findByName(String name, Pageable p) throws NotFoundException;
 
 
