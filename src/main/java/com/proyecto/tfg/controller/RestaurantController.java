@@ -35,8 +35,8 @@ public class RestaurantController extends AbstractController<Restaurant, Restaur
 
     @GetMapping("/searchTotal")
     public Long findSearchTotal(@RequestParam(required = false) String searchName) throws NotFoundException {
-        final Long totaldeUserSearch = restaurantService.restaurantSearchTotal(searchName);
-        return totaldeUserSearch;
+        final Long totaldeRestaurantSearch = restaurantService.restaurantSearchTotal(searchName);
+        return totaldeRestaurantSearch;
     }
 
     @GetMapping

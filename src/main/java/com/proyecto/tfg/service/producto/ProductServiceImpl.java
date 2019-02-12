@@ -10,9 +10,11 @@ import com.proyecto.tfg.service.AbstractService;
 import com.proyecto.tfg.service.restaurant.RestaurantService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 @Service
@@ -76,5 +78,16 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
         to.setName(from.getName());
         to.setIdProduct(from.getIdProduct());
     }
+
+    @Override
+    public List<Product> findByName(String name, Pageable p) throws NotFoundException {
+        return productRespository.findByName(name.toLowerCase(Locale.getDefault()), p);
+    }
+
+    @Override
+    public Long productSearchTotal(String name) {
+        return productRespository.productSearchTotal(name);
+    }
+
 
 }
