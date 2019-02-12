@@ -17,7 +17,10 @@ public interface RestaurantService extends Service<Restaurant, Long> {
     void deleteRestaurant(Long idUser, Long idRestaurant)throws NotFoundException;
     void addtoproduct(Restaurant restaurant, Product product);
     List<Restaurant> findRestaurantbyiduser(Long id, Pageable p) throws NotFoundException;
-//    List<Product> getAllProduct(Restaurant r);
     Long restaurantTotal();
+    Long restaurantSearchTotal(String name);
+
+    List<Restaurant> findByName(String name, Pageable p) throws NotFoundException;
+
 
 }

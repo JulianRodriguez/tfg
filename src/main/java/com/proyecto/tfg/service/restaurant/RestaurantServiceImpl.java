@@ -17,6 +17,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Locale;
 
 @Service
 public class RestaurantServiceImpl extends AbstractService<Restaurant, RestaurantDAO> implements RestaurantService {
@@ -85,6 +86,16 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
     @Override
     public Long restaurantTotal() {
         return restaurantRepository.restaurantTotal();
+    }
+
+    @Override
+    public Long restaurantSearchTotal(String name) {
+        return restaurantRepository.restaurantSearchTotal(name);
+    }
+
+    @Override
+    public List<Restaurant> findByName(String name, Pageable p) throws NotFoundException {
+        return restaurantRepository.findByName(name.toLowerCase(Locale.getDefault()), p);
     }
 
     @Override

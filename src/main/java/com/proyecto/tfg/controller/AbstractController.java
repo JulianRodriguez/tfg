@@ -29,12 +29,12 @@ public abstract class AbstractController<T, E> {
 	@Autowired
 	Mapper<T, E> mapper;
 	
-	@GetMapping
-	public List<E> findAll(@RequestParam(defaultValue = "0", required= false ) Integer page, 
-							 @RequestParam(defaultValue = "10", required= false ) Integer size) throws InvalidRequestException {
-		final List<T> models = service.findAll(PageRequest.of(page, size));
-		return mapper.modelToDto(models);
-	}
+//	@GetMapping
+//	public List<E> findAll(@RequestParam(defaultValue = "0", required= false ) Integer page,
+//							 @RequestParam(defaultValue = "10", required= false ) Integer size) throws InvalidRequestException {
+//		final List<T> models = service.findAll(PageRequest.of(page, size));
+//		return mapper.modelToDto(models);
+//	}
 	
 	@GetMapping("/{id}")
 	public E findById(@PathVariable("id") Long id) throws NotFoundException {

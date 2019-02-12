@@ -12,5 +12,5 @@ public class RestaurantDTO {
     private String nameRestaurant;
     private String descriptionRestaurant;
 //    private List<User> users;
-    private Long idUser;
+//    private Long idUser;
 }
