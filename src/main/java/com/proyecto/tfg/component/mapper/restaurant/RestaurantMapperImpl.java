@@ -1,10 +1,7 @@
 package com.proyecto.tfg.component.mapper.restaurant;
 
 import com.proyecto.tfg.component.mapper.AbstractMapper;
-import com.proyecto.tfg.component.mapper.user.UserMapper;
 import com.proyecto.tfg.dto.restaurant.RestaurantDTO;
-import com.proyecto.tfg.dto.user.UserDTO;
-import com.proyecto.tfg.dto.user.UserPostDTO;
 import com.proyecto.tfg.exception.NotFoundException;
 import com.proyecto.tfg.model.Restaurant;
 import com.proyecto.tfg.model.User;

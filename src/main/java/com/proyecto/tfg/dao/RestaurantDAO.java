@@ -20,5 +20,6 @@ public interface RestaurantDAO extends GenericDAO<Restaurant> {
 
     @Query(value = "select u from Restaurant AS u where LOWER(u.nameRestaurant) LIKE %:name%")
     List<Restaurant> findByName (@Param("name") String name, Pageable pageable);
+
 }
 

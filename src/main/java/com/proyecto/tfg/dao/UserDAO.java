@@ -1,6 +1,7 @@
 package com.proyecto.tfg.dao;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 import com.proyecto.tfg.model.Restaurant;
@@ -19,6 +20,9 @@ public interface UserDAO extends GenericDAO<User> {
 
 	@Query(value = "select q from User as r join r.restaurant as q where r.idUser = :idUser")
 	List<Restaurant> findRestaurantbyiduser(@Param("idUser") Long idUser, Pageable p);
+
+	@Query(value = "select r from User as q join q.restaurant as r where q.idUser = :idUser and LOWER(r.nameRestaurant) LIKE %:name%")
+	List<Restaurant> findRestauratbyiduserandname(@Param("idUser") Long idUser,@Param("name") String name, Pageable p);
 
 	@Query(value = "select count(idUser) from User")
 	Long userTotales();

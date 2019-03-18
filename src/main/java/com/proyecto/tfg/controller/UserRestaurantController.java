@@ -42,10 +42,24 @@ public class UserRestaurantController {
     @GetMapping
     public List<RestaurantDTO> findAll(@RequestParam(defaultValue = "0", required = false) Integer page,
                                        @RequestParam(defaultValue = "10", required= false ) Integer size,
+                                       @RequestParam(required = false) String searchName,
                                        @PathVariable("idUser") Long idUser) throws NotFoundException{
-        final List<Restaurant> result = restaurantService.findRestaurantbyiduser(idUser, PageRequest.of(page, size));
-        System.out.println(result);
-        return restaurantMapper.modelToDto(result);
+//        final List<Restaurant> result = restaurantService.findRestaurantbyiduser(idUser, PageRequest.of(page, size));
+//        System.out.println(result);
+//        return restaurantMapper.modelToDto(result);
+
+        final List<Restaurant> restaurants;
+        if(searchName == null) {
+            restaurants = restaurantService.findRestaurantbyiduser(idUser, PageRequest.of(page, size));
+            System.out.println("searchName nulo");
+        }
+        else{
+            restaurants = restaurantService.findIdUserAndByName(idUser,searchName, PageRequest.of(page, size));
+            System.out.println("searchName no Nulo");
+            System.out.println(restaurants);
+        }
+        final Long totalRestaurant = restaurantService.restaurantTotal();
+        return restaurantMapper.modelToDto(restaurants);
     }
 
     @DeleteMapping("/{idRestaurant}")

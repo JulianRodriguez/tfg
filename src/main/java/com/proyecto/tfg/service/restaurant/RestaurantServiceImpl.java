@@ -99,6 +99,11 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
     }
 
     @Override
+    public List<Restaurant> findIdUserAndByName(Long id, String name, Pageable p) throws NotFoundException {
+        return userDAO.findRestauratbyiduserandname(id,name.toLowerCase(Locale.getDefault()), p);
+    }
+
+    @Override
     public Restaurant getAndCheck(Long id) throws NotFoundException {
         return findById(id).orElseThrow(() -> new NotFoundException("El usuario no existe"));
     }
