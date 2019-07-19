@@ -17,6 +17,7 @@ public interface UserService extends Service<User, Long> {
 	Long usertotal();
 	Long userSearchTotal(String name);
 	List<User> findByName(String name, Pageable p) throws NotFoundException;
+	User updateValores(User u, User y);
 
 
 }

@@ -9,7 +9,6 @@
 	<packaging>jar</packaging>
 
 	<name>tfg</name>
-	<description>Backend of ConTask</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

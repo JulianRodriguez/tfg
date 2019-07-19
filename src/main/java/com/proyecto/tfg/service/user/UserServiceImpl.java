@@ -87,6 +87,28 @@ public class UserServiceImpl extends AbstractService<User, UserDAO> implements U
 		return userDAO.findByName(name.toLowerCase(Locale.getDefault()), p);
 	}
 
+	@Override
+	public User updateValores(User u, User y) {
+
+		System.out.println("Imprimo el username");
+		System.out.println(y.getUsername());
+		if(y.getUsername()!= null)
+			u.setUsername(y.getUsername());
+		if(y.getName()!= null)
+			u.setName(y.getName());
+		if(y.getPhone()!= null)
+			u.setPhone(y.getPhone());
+		if(y.getEmail()!= null)
+			u.setEmail(y.getEmail());
+		if(y.getPassword()!= null)
+			u.setPassword(y.getPassword());
+		if(y.getRole()!= null)
+			u.setRole(y.getRole());
+
+		return u;
+
+	}
+
 //	@Override
 //	public List<User> findByName(String name) throws NotFoundException {
 //		return userDAO.findByName(name.toLowerCase(Locale.getDefault()));

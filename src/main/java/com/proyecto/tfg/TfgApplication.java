@@ -128,29 +128,51 @@ public class TfgApplication {
 			User admin = new User();
 //			User user = new User();
 
-			Restaurant restaurant = new Restaurant();
-			Restaurant restaurant2 = new Restaurant();
+
+
+
+
 			List<Restaurant> restaurants = new ArrayList<>();
-			List<Restaurant> restaurants2 = new ArrayList<>();
+			Restaurant restaurant2S = new Restaurant();
+			restaurant2S.setNameRestaurant("McDonald");
+			restaurant2S.setDescriptionRestaurant("Hambu");
+			restaurants.add(restaurant2S);
+			Restaurant restaurant = new Restaurant();
 			restaurant.setNameRestaurant("La Pepa");
 			restaurant.setDescriptionRestaurant("Cerveza artesanal");
+			restaurants.add(restaurant);
+
+			List<Restaurant> restaurants2 = new ArrayList<>();
+
+			Restaurant restaurant2J = new Restaurant();
+			restaurant2J.setNameRestaurant("BurgerKing");
+			restaurant2J.setDescriptionRestaurant("Cositas bonitas");
+			restaurants2.add(restaurant2J);
+			Restaurant restaurant2 = new Restaurant();
 			restaurant2.setNameRestaurant("Rincon de Ana");
 			restaurant2.setDescriptionRestaurant("Comida artesanal");
-//			restaurantDAO.save(restaurant);
-			restaurants.add(restaurant);
 			restaurants2.add(restaurant2);
 			System.out.println(restaurants);
 
 
 			Product product = new Product();
             Product product2 = new Product();
+			Product product3 = new Product();
+			Product product4 = new Product();
             List<Product> prod1 = new ArrayList<>();
             List<Product> prod2 = new ArrayList<>();
             product.setDescription("Plato de arroz muy rico. Hecho en cai");
             product.setName("Paella");
             product2.setName("Hamburguesa de queso");
             product2.setDescription("Famosa hamburguesa tipica de aqui");
+			product3.setName("Carrillada");
+			product3.setDescription("carnecita");
+			product4.setName("Salchicha");
+			product4.setDescription("bbb");
             prod1.add(product);
+			prod1.add(product4);
+			prod1.add(product3);
+
             prod2.add(product2);
 
             restaurant.setProduct(prod1);

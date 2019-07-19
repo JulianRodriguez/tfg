@@ -18,6 +18,7 @@ public interface ProductService extends Service<Product, Long> {
     Long productTotal();
     List<Product> findByName(String name, Pageable p) throws NotFoundException;
     Long productSearchTotal(String name);
+    List<Product> findProductbyiduser(Long id,String name, Pageable p) throws NotFoundException;
 
 
 

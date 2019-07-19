@@ -32,7 +32,12 @@ public class UserMapperImpl extends AbstractMapper<User, UserDTO> implements Use
 
 		System.out.println("En un lugar de la mancha");
         System.out.println("id rol es:"+dto.getIdRole());
-        Role role = longToRole(dto.getIdRole());
+		Role role;
+		if(dto.getIdRole() != 0){
+			role = longToRole(dto.getIdRole());
+		}else{
+			role = null;
+		}
 		return map(dto, role);
 	}
 
@@ -40,11 +45,17 @@ public class UserMapperImpl extends AbstractMapper<User, UserDTO> implements Use
 	public User dtoToModel(UserDTO dto) throws NotFoundException {
 
 		System.out.println("En un lugar de la mancha");
+		Role role;
 		System.out.println("id rol es:"+dto.getIdRole());
-		Role role = longToRole(dto.getIdRole());
+		if(dto.getIdRole() != 0){
+			role = longToRole(dto.getIdRole());
+		}else{
+			role = null;
+		}
 		return map(dto, role);
 	}
-	
+
+
 	private Role longToRole(Long idRole) throws NotFoundException {
 			return roleService.findById(idRole)
 					.orElseThrow(() -> new NotFoundException("El rol no existe"));	

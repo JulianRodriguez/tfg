@@ -95,8 +95,11 @@ public class UserController {
 		if(dto.getIdUser() != null) 
 			throw new InvalidRequestException("El idUser no se puede recibir en el body");
 		final User user = userService.getAndCheck(id);
-		userService.setValues(user, userMapper.dtoToModel(dto));
-		userService.update(user);
+		System.out.println("Imprimo el dto");
+		System.out.println(dto);
+		final User userFrom = userMapper.dtoToModel(dto);
+		final User userTo = userService.updateValores(user, userFrom);
+		userService.update(userTo);
 	}
 	
 	@DeleteMapping("/{idUser}")

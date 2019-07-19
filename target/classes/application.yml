@@ -3,9 +3,9 @@ spring:
     enabled: false
   profile: local
   datasource:
-    url: jdbc:mysql://localhost:33060/tfg?useSSL=false
+    url: jdbc:mysql://localhost:3306/tfg?useSSL=false
     username: ubuntuserver
-    password: juliansean
+    password: ubuntuserver
   jackson:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false

@@ -20,4 +20,10 @@ public class ProductMapperImpl extends AbstractMapper<Product, ProductDTO> imple
     public Class<? extends Product> modelClazz() {
         return Product.class;
     }
+
+    @Override
+    public ProductDTO modelToDto(Product model) {
+        ProductDTO dto = dozer.map(model, dtoClazz());
+        return dto;
+    }
 }

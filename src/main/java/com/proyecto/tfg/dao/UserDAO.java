@@ -16,7 +16,7 @@ import com.proyecto.tfg.model.User;
 public interface UserDAO extends GenericDAO<User> {
 
 	Optional<User> findOneByUsername(String username);
-//	List<Restaurant> fin
+
 
 	@Query(value = "select q from User as r join r.restaurant as q where r.idUser = :idUser")
 	List<Restaurant> findRestaurantbyiduser(@Param("idUser") Long idUser, Pageable p);
@@ -31,5 +31,5 @@ public interface UserDAO extends GenericDAO<User> {
 	Long userTotalesSearch(@Param("name") String name);
 
 	@Query(value = "select u from User AS u where LOWER(u.name) LIKE %:name%")
-	List<User> findByName (@Param("name") String name, Pageable pageable);
+	List<User> findByName (  String name, Pageable pageable);
 }

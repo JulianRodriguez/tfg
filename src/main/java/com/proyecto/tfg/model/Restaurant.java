@@ -22,8 +22,6 @@ public class Restaurant {
     @Column(nullable = false)
     private String descriptionRestaurant;
 
-    //Falta guardar la foto
-
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = FIELD_PRODUCT, referencedColumnName = FIELD_PRODUCT)
     private List<Product> product;

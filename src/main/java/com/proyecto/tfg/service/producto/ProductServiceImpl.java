@@ -10,6 +10,7 @@ import com.proyecto.tfg.service.AbstractService;
 import com.proyecto.tfg.service.restaurant.RestaurantService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,9 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
     @Autowired
     private ProductDAO productRespository;
 
+    @Autowired
+    RestaurantDAO restaurantDAO;
+
     @Override
     public Product create(ProductDTO productDTO) {
         final Product product = new Product();
@@ -41,6 +45,12 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
     public List<Product> getAll(Long idRestaurant)throws NotFoundException {
         final Restaurant restaurant = restaurantService.getRestaurant(idRestaurant);
         return restaurant.getProduct();
+    }
+
+    @Override
+    public List<Product> findProductbyiduser(Long id,String name, Pageable p) throws NotFoundException {
+        final Restaurant restaurant = restaurantService.getAndCheck(id);
+        return restaurantDAO.findProductbyiduserandName(id,name, PageRequest.of(p.getPageNumber(), p.getPageSize()));
     }
 
     @Override
@@ -71,6 +81,8 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
         return StringUtils.equals(u1.getName(), u2.getName()) &&
                 StringUtils.equals(u1.getDescription(), u2.getDescription());
     }
+
+
 
     @Override
     public void setValues(Product to, Product from) {

@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.util.matcher.AndRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -50,6 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	    	.authorizeRequests()    
 	    	.antMatchers(HttpMethod.POST, "/login").permitAll()
 	    	.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+			.antMatchers(HttpMethod.POST, "/auth/logout").permitAll()
 	    	
 	    	.antMatchers(HttpMethod.GET, URLRESTAURANT).hasAuthority("GET_RESTAURANT")
 	    	.antMatchers(HttpMethod.POST, URLRESTAURANT).hasAuthority("POST_RESTAURANT")

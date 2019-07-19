@@ -16,14 +16,16 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
 
 import com.proyecto.tfg.dto.user.ConnectedDTO;
 import com.proyecto.tfg.exception.InvalidRequestException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 public class LoginController {
@@ -64,6 +66,7 @@ public class LoginController {
 	    	throw new InvalidRequestException("Se debe incluir la autenticación en la petición.");
 	    }
 	}
+
 	
 	@GetMapping("/connection") 
 	public ResponseEntity<ConnectedDTO> connected(Authentication auth) {
@@ -72,5 +75,12 @@ public class LoginController {
 		final HttpStatus statusConnection = isConected ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
 		
 		return new ResponseEntity<>(statusConnection);
+	}
+
+	@PostMapping("/logout")
+	public void logout(Authentication auth) {
+		if(auth != null) {
+			RequestContextHolder.resetRequestAttributes();
+		}
 	}
 }
