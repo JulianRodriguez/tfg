@@ -22,6 +22,9 @@ public class Product {
     @Column(nullable = false)
     private String description;
 
+    @Column(columnDefinition="LONGTEXT")
+    private String photo;
+
     //Aqui falta añadir la imagen
 
 //    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)

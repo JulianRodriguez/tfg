@@ -104,6 +104,17 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
     }
 
     @Override
+    public Restaurant updateValores(Restaurant u, Restaurant y) {
+
+        if(y.getNameRestaurant()!=null)
+            u.setNameRestaurant(y.getNameRestaurant());
+        if (y.getDescriptionRestaurant()!=null)
+            u.setDescriptionRestaurant(y.getDescriptionRestaurant());
+        return u;
+
+    }
+
+    @Override
     public Restaurant getAndCheck(Long id) throws NotFoundException {
         return findById(id).orElseThrow(() -> new NotFoundException("El usuario no existe"));
     }

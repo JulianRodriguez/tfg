@@ -38,6 +38,7 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
         final Product product = new Product();
         product.setName(productDTO.getName());
         product.setDescription(productDTO.getDescription());
+        product.setPhoto(productDTO.getPhoto());
         return productRespository.save(product);
     }
 
@@ -89,6 +90,7 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
         to.setDescription(from.getDescription());
         to.setName(from.getName());
         to.setIdProduct(from.getIdProduct());
+        to.setPhoto(from.getPhoto());
     }
 
     @Override

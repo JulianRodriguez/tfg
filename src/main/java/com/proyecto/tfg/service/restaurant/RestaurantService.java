@@ -22,5 +22,6 @@ public interface RestaurantService extends Service<Restaurant, Long> {
 
     List<Restaurant> findByName(String name, Pageable p) throws NotFoundException;
     List<Restaurant> findIdUserAndByName(Long id, String name, Pageable p) throws NotFoundException;
+    Restaurant updateValores(Restaurant u, Restaurant y);
 
 }
