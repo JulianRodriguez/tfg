@@ -91,7 +91,7 @@ public class UserController {
 	}
 	
 	@PutMapping("/{idUser}")
-	public void update(@PathVariable("idUser") Long id, @RequestBody UserPostDTO dto) throws InvalidRequestException, NotFoundException {
+	public void update(@PathVariable("idUser") Long id, @RequestBody UserDTO dto) throws InvalidRequestException, NotFoundException {
 		if(dto.getIdUser() != null) 
 			throw new InvalidRequestException("El idUser no se puede recibir en el body");
 		final User user = userService.getAndCheck(id);
