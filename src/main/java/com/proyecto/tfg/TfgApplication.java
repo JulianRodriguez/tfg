@@ -62,6 +62,8 @@ public class TfgApplication {
 			p1.setName("DELETE_RESTAURANT");
 			privilegeDAO.save(p1);
 			apr1.add(p1);
+
+			apr3.add(p1);
 			
 			p1 = new Privilege();
 			p1.setName("GET_USER");
@@ -123,6 +125,9 @@ public class TfgApplication {
 			
 			r2.setPrivilege(apr2);
 			roleDAO.save(r2);
+
+			r3.setPrivilege(apr3);
+			roleDAO.save(r3);
 
 			//Users
 			User admin = new User();
@@ -201,11 +206,11 @@ public class TfgApplication {
 			{
 				User userprueba = new User();
 				userprueba.setName("Paco"+i);
-				userprueba.setUsername("Paco"+i);
+				userprueba.setUsername("Pacoo"+i);
 				userprueba.setEmail("Paco@gmail.com"+i);
 				userprueba.setPhone("435243124"+i);
 				userprueba.setPassword(DigestUtils.sha1Hex("1234"+i));
-				userprueba.setRole(r2);
+				userprueba.setRole(r3);
 				userDAO.save(userprueba);
 			}
 

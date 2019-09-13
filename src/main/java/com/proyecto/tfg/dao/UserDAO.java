@@ -15,7 +15,11 @@ import com.proyecto.tfg.model.User;
 @Repository
 public interface UserDAO extends GenericDAO<User> {
 
-	Optional<User> findOneByUsername(String username);
+	Optional<User> findByUsername(String username);
+	Optional<User>  findOneByEmail(String email);
+
+	@Query(value = "select count(username) from User where username = :username")
+	Long BuscarPorUsername(String username);
 
 
 	@Query(value = "select q from User as r join r.restaurant as q where r.idUser = :idUser")
@@ -26,6 +30,8 @@ public interface UserDAO extends GenericDAO<User> {
 
 	@Query(value = "select count(idUser) from User")
 	Long userTotales();
+
+
 
 	@Query(value = "select count(u) from User AS u where LOWER(u.name) LIKE %:name%")
 	Long userTotalesSearch(@Param("name") String name);

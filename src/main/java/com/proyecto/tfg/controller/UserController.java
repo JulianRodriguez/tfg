@@ -68,6 +68,24 @@ public class UserController {
 		final Long totaldeUser = userService.usertotal();
 		return totaldeUser;
 	}
+	@GetMapping("/check_user")
+	public boolean checkUser (@RequestParam(required = false) String value) throws NotFoundException{
+
+		boolean valido = true;
+		if (!userService.CheckByUsername(value)){
+			valido = false;
+		}
+		return valido;
+	}
+	@GetMapping("/check_email")
+	public boolean checkEmail (@RequestParam(required = false) String value) throws NotFoundException{
+
+		boolean valido = true;
+		if (!userService.CheckByEmail(value)){
+			valido = false;
+		}
+		return valido;
+	}
 
 	@GetMapping("/searchTotal")
 	public Long findSearchTotal(@RequestParam(required = false) String searchName) throws NotFoundException {

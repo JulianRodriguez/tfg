@@ -13,6 +13,7 @@ import com.proyecto.tfg.service.AbstractService;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.Optional;
 
 @Service(value = "userService")
 public class UserServiceImpl extends AbstractService<User, UserDAO> implements UserService {
@@ -62,7 +63,29 @@ public class UserServiceImpl extends AbstractService<User, UserDAO> implements U
 
 	@Override
 	public User getAndCheckByUsername(String username) throws NotFoundException {
-		return userDAO.findOneByUsername(username).orElseThrow(() -> new NotFoundException("El usuario no existe"));
+		return userDAO.findByUsername(username).orElseThrow(() -> new NotFoundException("El usuario no existe"));
+	}
+
+	@Override
+	public Boolean CheckByUsername(String username) throws NotFoundException {
+
+		Long i = userDAO.BuscarPorUsername(username);
+		System.out.println(i);
+		if(i>0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+	@Override
+	public Boolean CheckByEmail(String email) throws NotFoundException {
+		boolean valido = false;
+		if(userDAO.findOneByEmail(email)!=null){
+			valido = true;
+		}
+		return valido;
 	}
 
 	@Override

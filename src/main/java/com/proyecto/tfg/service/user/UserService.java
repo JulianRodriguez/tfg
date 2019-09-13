@@ -18,6 +18,9 @@ public interface UserService extends Service<User, Long> {
 	Long userSearchTotal(String name);
 	List<User> findByName(String name, Pageable p) throws NotFoundException;
 	User updateValores(User u, User y);
+	Boolean CheckByUsername(String username) throws NotFoundException;
+	Boolean CheckByEmail(String email) throws NotFoundException;
+
 
 
 }
