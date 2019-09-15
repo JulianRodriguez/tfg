@@ -82,10 +82,13 @@ public class UserServiceImpl extends AbstractService<User, UserDAO> implements U
 	@Override
 	public Boolean CheckByEmail(String email) throws NotFoundException {
 		boolean valido = false;
-		if(userDAO.findOneByEmail(email)!=null){
-			valido = true;
+		Long i = userDAO.BuscarPorEmail(email);
+		if(i>0){
+			return true;
 		}
-		return valido;
+		else{
+			return false;
+		}
 	}
 
 	@Override
