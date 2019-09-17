@@ -20,9 +20,13 @@ public interface UserDAO extends GenericDAO<User> {
 	@Query(value = "select count(username) from User where username = :username")
 	Long BuscarPorUsername(String username);
 
+	@Query(value = "select count(email) from User where email = :email AND password = :pass")
+	Long BuscarPorPass(String email, String pass);
+
 	@Query(value = "select count(email) from User where email = :email")
 	Long BuscarPorEmail(String email);
 
+	User findByEmail(String email);
 
 	@Query(value = "select q from User as r join r.restaurant as q where r.idUser = :idUser")
 	List<Restaurant> findRestaurantbyiduser(@Param("idUser") Long idUser, Pageable p);

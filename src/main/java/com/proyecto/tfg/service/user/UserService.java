@@ -6,6 +6,7 @@ import com.proyecto.tfg.model.User;
 import com.proyecto.tfg.service.Service;
 import org.springframework.data.domain.Pageable;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 public interface UserService extends Service<User, Long> {
@@ -20,6 +21,7 @@ public interface UserService extends Service<User, Long> {
 	User updateValores(User u, User y);
 	Boolean CheckByUsername(String username) throws NotFoundException;
 	Boolean CheckByEmail(String email) throws NotFoundException;
+	Boolean checkBypass(String email, String pass) throws NotFoundException, UnsupportedEncodingException;
 
 
 

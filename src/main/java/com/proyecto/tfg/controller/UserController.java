@@ -1,9 +1,14 @@
 package com.proyecto.tfg.controller;
 
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,8 +43,10 @@ public class UserController {
 	
 	@Autowired
 	UserMapper userMapper;
-	
-	@GetMapping
+
+
+
+    @GetMapping
 	@ApiOperation(notes="Devuelve una lista de usuarios paginado, cada página tendrá un tamaño máximo de 10", tags= { "User" }, value="All user")
 	@ApiResponses({ @ApiResponse(code = 200, response= UserDTO.class, message="All users"),
 					@ApiResponse(code = 401, response= ApiErrorDTO.class, message="Invalid Request")
@@ -77,6 +84,16 @@ public class UserController {
 		}
 		return valido;
 	}
+    @GetMapping("/check_pass")
+    public boolean checkPass (@RequestParam(required = false) String email, @RequestParam(required = false) String pass) throws NotFoundException, UnsupportedEncodingException {
+
+        boolean valido = false;
+        if (userService.checkBypass(email,pass)){
+            valido = true;
+        }
+        return valido;
+    }
+
 	@GetMapping("/check_email")
 	public boolean checkEmail (@RequestParam(required = false) String value) throws NotFoundException{
 
@@ -86,6 +103,37 @@ public class UserController {
 		}
 		return valido;
 	}
+
+    @PutMapping("/setPass")
+    public boolean setPass(@RequestBody UserPostDTO dto) throws NotFoundException, InvalidRequestException{
+
+        System.out.println("Imprimo el dto");
+        System.out.println(dto);
+        if(dto.getIdUser() == null)
+            throw new InvalidRequestException("No se ha recibido el id");
+        final User user = userService.getAndCheck(dto.getIdUser());
+        System.out.println("Imprimo el user");
+        System.out.println(user.getPassword());
+		String encryptPassword = Optional.ofNullable(dto.getPassword()).map(DigestUtils::sha1Hex).orElse(StringUtils.EMPTY);
+        user.setPassword(encryptPassword);
+        System.out.println("Imprimo el dto");
+        userService.update(user);
+        return true;
+
+
+    }
+
+    @PutMapping("/{idUser}")
+    public void update(@PathVariable("idUser") Long id, @RequestBody UserDTO dto) throws InvalidRequestException, NotFoundException {
+        if(dto.getIdUser() != null)
+            throw new InvalidRequestException("El idUser no se puede recibir en el body");
+        final User user = userService.getAndCheck(id);
+        System.out.println("Imprimo el dto");
+        System.out.println(dto);
+        final User userFrom = userMapper.dtoToModel(dto);
+        final User userTo = userService.updateValores(user, userFrom);
+        userService.update(userTo);
+    }
 
 	@GetMapping("/searchTotal")
 	public Long findSearchTotal(@RequestParam(required = false) String searchName) throws NotFoundException {
@@ -106,18 +154,6 @@ public class UserController {
 		final User user = userMapper.dtoToModel(dto);
 		final User createUser = userService.create(user);
 		return userMapper.modelToDto(createUser);
-	}
-	
-	@PutMapping("/{idUser}")
-	public void update(@PathVariable("idUser") Long id, @RequestBody UserDTO dto) throws InvalidRequestException, NotFoundException {
-		if(dto.getIdUser() != null) 
-			throw new InvalidRequestException("El idUser no se puede recibir en el body");
-		final User user = userService.getAndCheck(id);
-		System.out.println("Imprimo el dto");
-		System.out.println(dto);
-		final User userFrom = userMapper.dtoToModel(dto);
-		final User userTo = userService.updateValores(user, userFrom);
-		userService.update(userTo);
 	}
 	
 	@DeleteMapping("/{idUser}")

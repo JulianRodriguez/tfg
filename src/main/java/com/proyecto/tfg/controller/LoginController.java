@@ -41,10 +41,10 @@ public class LoginController {
 	
 	@PostMapping("/login")
 	public ConnectedDTO login(@RequestHeader("Authorization") String auth) throws UnsupportedEncodingException, InvalidRequestException, NotFoundException {
-		
-	    if (auth != null && auth.startsWith("Basic")) {
-	        String credentials = new String(Base64.getDecoder().decode(auth.substring(LONGTEXTBASIC).trim()), "UTF-8");
-	        final String[] values = credentials.split(":",2);
+		if (auth != null && auth.startsWith("Basic")) {
+			String credentials = new String(Base64.getDecoder().decode(auth.substring(LONGTEXTBASIC).trim()), "UTF-8");
+			final String[] values = credentials.split(":",2);
+
 	        
 	        if(values.length == 2) { 
 	        	final Authentication token = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(values[0], values[1]));
@@ -53,6 +53,10 @@ public class LoginController {
 
 	        	return ConnectedDTO.builder()
 						.idUser(u.getIdUser())
+						.name(u.getName())
+						.email(u.getEmail())
+						.phone(u.getPhone())
+						.idRole(u.getRole().getIdRole())
 	    				.username(values[0])
 	    				.grantedAuthorities(token.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
 						.rolename(u.getRole().getName())

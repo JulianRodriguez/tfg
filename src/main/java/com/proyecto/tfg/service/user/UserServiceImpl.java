@@ -1,8 +1,10 @@
 package com.proyecto.tfg.service.user;
 
 import com.proyecto.tfg.dao.UserDAO;
+import com.proyecto.tfg.dto.user.UserDTO;
 import com.proyecto.tfg.model.Restaurant;
 import com.proyecto.tfg.model.User;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -11,6 +13,8 @@ import org.springframework.stereotype.Service;
 import com.proyecto.tfg.exception.NotFoundException;
 import com.proyecto.tfg.service.AbstractService;
 
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
@@ -21,7 +25,10 @@ public class UserServiceImpl extends AbstractService<User, UserDAO> implements U
 	@Autowired
 	UserDAO userDAO;
 
-	@Override
+    private static final Integer LONGTEXTBASIC = 5;
+
+
+    @Override
 	public User getUser(Long idUser) throws NotFoundException {
 		return userDAO.findById(idUser)
 				.orElseThrow(()->new NotFoundException(String.format("Usuario no encontrado (%d)",idUser)));
@@ -91,7 +98,31 @@ public class UserServiceImpl extends AbstractService<User, UserDAO> implements U
 		}
 	}
 
-	@Override
+    @Override
+    public Boolean checkBypass(String email, String pass) throws NotFoundException {
+
+        String encryptPassword = Optional.ofNullable(pass).map(DigestUtils::sha1Hex).orElse(StringUtils.EMPTY);
+        try{
+            User u = userDAO.findByEmail(email);
+            String password = u.getPassword();
+            if(password.equals(encryptPassword)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (Exception e){
+            return false;
+        }
+
+    }
+
+//	@Override
+//	public Boolean updatePass(User u, String pass) {
+//
+//	}
+
+
+    @Override
 	public void addrestaurant(Long idUser, Restaurant r) throws NotFoundException {
 		User u = getUser(idUser);
 		u.getRestaurant().add(r);
