@@ -14,6 +14,7 @@ public interface UserService extends Service<User, Long> {
 	User getAndCheckByUsername(String username) throws NotFoundException;
 	void addrestaurant(Long idUser, Restaurant r)throws NotFoundException;
 	User getUser(Long idUser) throws NotFoundException;
+	User getUserWithEmail(String email) throws NotFoundException;
 	void removeRestaurant(User u, Restaurant r);
 	Long usertotal();
 	Long userSearchTotal(String name);

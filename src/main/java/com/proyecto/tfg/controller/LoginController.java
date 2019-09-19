@@ -41,6 +41,10 @@ public class LoginController {
 	
 	@PostMapping("/login")
 	public ConnectedDTO login(@RequestHeader("Authorization") String auth) throws UnsupportedEncodingException, InvalidRequestException, NotFoundException {
+
+		System.out.println("Estoy en login");
+		System.out.println(auth);
+
 		if (auth != null && auth.startsWith("Basic")) {
 			String credentials = new String(Base64.getDecoder().decode(auth.substring(LONGTEXTBASIC).trim()), "UTF-8");
 			final String[] values = credentials.split(":",2);
@@ -73,18 +77,22 @@ public class LoginController {
 
 	
 	@GetMapping("/connection") 
-	public ResponseEntity<ConnectedDTO> connected(Authentication auth) {
+	public boolean connected(Authentication auth) {
 		
 		final Boolean isConected = Optional.ofNullable(auth).map(Authentication::getPrincipal).isPresent();
 		final HttpStatus statusConnection = isConected ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
 		
-		return new ResponseEntity<>(statusConnection);
+		return isConected;
 	}
 
 	@PostMapping("/logout")
 	public void logout(Authentication auth) {
 		if(auth != null) {
 			RequestContextHolder.resetRequestAttributes();
+			SecurityContextHolder.clearContext();
+			System.out.println("Estoy en logout dentro");
+
 		}
+		System.out.println("Estoy en logout fuera");
 	}
 }

@@ -21,9 +21,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	private static final String URLRESTAURANT = "/restaurant";
 	private static final String URLUSER = "/user";
-	private static final String URLSTORE = "/store";
 	private static final String URLPRIVILEGE = "/privilege";
 	private static final String URLROLE = "/role";
+	private static final String URLPRODUCT = "/product";
+	private static final String URLCHECKPASS = "/check_pass";
+	private static final String URLEMAIL = "/email";
+	public static final String ID = "/{^[\\d]$}";
 
 	private AuthenticationEntryPoint restAuthenticationEntryPoint;
 	private AuthenticationProvider customAuthenticationProvider;
@@ -41,6 +44,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	  
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+
+		http
+				.logout()
+				.logoutUrl("/exit");
 	
 		http
 	    	.csrf().disable()
@@ -51,22 +58,36 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	    	.authorizeRequests()    
 	    	.antMatchers(HttpMethod.POST, "/login").permitAll()
 	    	.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-			.antMatchers(HttpMethod.POST, "/auth/logout").permitAll()
+			.antMatchers(HttpMethod.POST, "/logout").permitAll()
 	    	
 	    	.antMatchers(HttpMethod.GET, URLRESTAURANT).hasAuthority("GET_RESTAURANT")
+	    	.antMatchers(HttpMethod.GET, URLRESTAURANT + ID).hasAuthority("GET_RESTAURANT")
 	    	.antMatchers(HttpMethod.POST, URLRESTAURANT).hasAuthority("POST_RESTAURANT")
 	    	.antMatchers(HttpMethod.PUT, URLRESTAURANT).hasAuthority("PUT_RESTAURANT")
+	    	.antMatchers(HttpMethod.PUT, URLRESTAURANT + ID).hasAuthority("PUT_RESTAURANT")
 	    	.antMatchers(HttpMethod.DELETE, URLRESTAURANT).hasAuthority("DELETE_RESTAURANT")
+
+			.antMatchers(HttpMethod.GET, URLPRODUCT).hasAuthority("GET_PRODUCT")
+			.antMatchers(HttpMethod.GET, URLPRODUCT + ID).hasAuthority("GET_PRODUCT")
+
+			.antMatchers(HttpMethod.PUT, URLEMAIL).hasAuthority("PUT_EMAIL")
 	    	
 	    	.antMatchers(HttpMethod.GET, URLUSER).hasAuthority("GET_USER")
 	    	.antMatchers(HttpMethod.POST, URLUSER).hasAuthority("POST_USER")
 	    	.antMatchers(HttpMethod.PUT, URLUSER).hasAuthority("PUT_USER")
 	    	.antMatchers(HttpMethod.DELETE, URLUSER).hasAuthority("DELETE_USER")
-	    	
-	    	.antMatchers(HttpMethod.GET, URLSTORE).hasAuthority("GET_STORE")
-	    	.antMatchers(HttpMethod.POST, URLSTORE).hasAuthority("POST_STORE")
-	    	.antMatchers(HttpMethod.PUT, URLSTORE).hasAuthority("PUT_STORE")
-	    	.antMatchers(HttpMethod.DELETE, URLSTORE).hasAuthority("DELETE_STORE")
+			.antMatchers(HttpMethod.GET, URLUSER + ID ).hasAuthority("GET_USER")
+//			.antMatchers(HttpMethod.GET, URLUSER + URLCHECKPASS ).hasAuthority("GET_USER")
+
+			.antMatchers(HttpMethod.POST, URLUSER + ID + URLRESTAURANT).hasAuthority("POST_RESTAURANT_USER")
+			.antMatchers(HttpMethod.GET, URLUSER + ID + URLRESTAURANT + ID).hasAuthority("GET_RESTAURANT_USER")
+			.antMatchers(HttpMethod.DELETE, URLUSER + ID + URLRESTAURANT + ID).hasAuthority("DELETE_RESTAURANT_USER")
+			.antMatchers(HttpMethod.GET, URLUSER + ID + URLRESTAURANT).hasAuthority("GET_RESTAURANT_USER")
+
+
+			.antMatchers(HttpMethod.GET, URLRESTAURANT + ID + URLPRODUCT + ID).hasAuthority("GET_PRODUCT_RESTAURANT")
+			.antMatchers(HttpMethod.GET, URLRESTAURANT + ID + URLPRODUCT).hasAuthority("GET_PRODUCT_RESTAURANT")
+			.antMatchers(HttpMethod.POST, URLRESTAURANT + ID + URLPRODUCT).hasAuthority("POST_PRODUCT_RESTAURANT")
 	    	
 	    	.antMatchers(HttpMethod.GET, URLPRIVILEGE).hasAuthority("GET_PRIVILEGE")
 	    	.antMatchers(HttpMethod.POST, URLPRIVILEGE).hasAuthority("POST_PRIVILEGE")

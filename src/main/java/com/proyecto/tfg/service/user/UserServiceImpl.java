@@ -33,7 +33,17 @@ public class UserServiceImpl extends AbstractService<User, UserDAO> implements U
 		return userDAO.findById(idUser)
 				.orElseThrow(()->new NotFoundException(String.format("Usuario no encontrado (%d)",idUser)));
 	}
-	
+
+	@Override
+	public User getUserWithEmail(String email) throws NotFoundException {
+		try{
+			User u = userDAO.findByEmail(email);
+			return u;
+		}catch (Exception e){
+			throw e;
+		}
+	}
+
 	@Override
 	public User getAndCheck(Long idUser) throws NotFoundException {
 		return findById(idUser).orElseThrow(() -> new NotFoundException("El usuario no existe"));
