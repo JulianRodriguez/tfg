@@ -107,15 +107,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.google.appengine</groupId>
-			<artifactId>appengine-testing</artifactId>
+			<artifactId>appengine-api-1.0-sdk</artifactId>
 			<version>${appengine.target.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.google.appengine</groupId>
-			<artifactId>appengine-api-stubs</artifactId>
-			<version>${appengine.target.version}</version>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -151,6 +144,21 @@
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>appengine-maven-plugin</artifactId>
 				<version>${appengine-maven-plugin-version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>.proyecto.tfg.TfgApplication</mainClass>
+				</configuration>
 			</plugin>
     		<!--<plugin>
     			<groupId>io.swagger</groupId>
