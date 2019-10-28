@@ -2,8 +2,13 @@ spring:
   thymeleaf:
     enabled: false
   profile: local
+  cloud:
+    gcp:
+  proyect−id: tfg-back
+  sql:
+    database−name: tfg
+    instance−connection−name: tfg-back:europe-west6:tfg-back
   datasource:
-    url: jdbc:mysql://34.65.68.159:3306/tfg?useSSL=false
     username: ubuntuserver
     password: ubuntuserver
   jackson:
