@@ -9,10 +9,15 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.firewall.DefaultHttpFirewall;
+import org.springframework.security.web.firewall.HttpFirewall;
+import org.springframework.security.web.firewall.StrictHttpFirewall;
 import org.springframework.security.web.util.matcher.AndRequestMatcher;
+import org.springframework.web.cors.reactive.CorsConfigurationSource;
 
 @Configuration
 @EnableWebSecurity
@@ -24,6 +29,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private static final String URLPRIVILEGE = "/privilege";
 	private static final String URLROLE = "/role";
 	private static final String URLPRODUCT = "/product";
+	private static final String URLCHECKUSER = "/check_user";
+	private static final String URLCHECKEMAIL = "/check_email";
 	private static final String URLCHECKPASS = "/check_pass";
 	private static final String URLEMAIL = "/email";
 	public static final String ID = "/{^[\\d]$}";
@@ -46,8 +53,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http
-				.logout()
-				.logoutUrl("/exit");
+			.logout()
+			.logoutUrl("/exit");
+
+//		http
+//			.cors().and();
 	
 		http
 	    	.csrf().disable()
@@ -69,6 +79,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 			.antMatchers(HttpMethod.GET, URLPRODUCT).hasAuthority("GET_PRODUCT")
 			.antMatchers(HttpMethod.GET, URLPRODUCT + ID).hasAuthority("GET_PRODUCT")
+
+			.antMatchers(HttpMethod.GET, URLCHECKUSER).permitAll()
+			.antMatchers(HttpMethod.GET, URLCHECKEMAIL).permitAll()
+			.antMatchers(HttpMethod.GET, URLCHECKPASS).permitAll()
 
 			.antMatchers(HttpMethod.PUT, URLEMAIL).hasAuthority("PUT_EMAIL")
 	    	
@@ -99,4 +113,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	    	.antMatchers(HttpMethod.PUT, URLROLE).hasAuthority("PUT_ROLE")
 	    	.antMatchers(HttpMethod.DELETE, URLROLE).hasAuthority("DELETE_ROLE");
 	}
+
+//    @Bean
+//    public HttpFirewall defaultHttpFirewall() {
+//        return new DefaultHttpFirewall();
+//    }
+
+//    @Override
+//    public void configure(WebSecurity web) throws Exception {
+//        web.httpFirewall(allowUrlEncodedSlashHttpFirewall());
+//    }
+
 }

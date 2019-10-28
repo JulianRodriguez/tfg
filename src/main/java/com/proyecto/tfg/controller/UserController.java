@@ -77,34 +77,6 @@ public class UserController {
 		final Long totaldeUser = userService.usertotal();
 		return totaldeUser;
 	}
-	@GetMapping("/check_user")
-	public boolean checkUser (@RequestParam(required = false) String value) throws NotFoundException{
-
-		boolean valido = true;
-		if (!userService.CheckByUsername(value)){
-			valido = false;
-		}
-		return valido;
-	}
-    @GetMapping("/check_pass")
-    public boolean checkPass (@RequestParam(required = false) String email, @RequestParam(required = false) String pass) throws NotFoundException, UnsupportedEncodingException {
-
-        boolean valido = false;
-        if (userService.checkBypass(email,pass)){
-            valido = true;
-        }
-        return valido;
-    }
-
-	@GetMapping("/check_email")
-	public boolean checkEmail (@RequestParam(required = false) String value) throws NotFoundException{
-
-		boolean valido = true;
-		if (!userService.CheckByEmail(value)){
-			valido = false;
-		}
-		return valido;
-	}
 
     @PutMapping("/setPass")
     public boolean setPass(@RequestBody UserPostDTO dto) throws NotFoundException, InvalidRequestException{
@@ -154,6 +126,8 @@ public class UserController {
 		if(dto.getIdUser() != null) 
 			throw new InvalidRequestException("El idUser no se puede recibir en el body");
 		final User user = userMapper.dtoToModel(dto);
+        String encryptPassword = Optional.ofNullable(dto.getPassword()).map(DigestUtils::sha1Hex).orElse(StringUtils.EMPTY);
+        user.setPassword(encryptPassword);
 		final User createUser = userService.create(user);
 		return userMapper.modelToDto(createUser);
 	}
