@@ -3,8 +3,8 @@ spring:
     enabled: false
   profile: local
   datasource:
-    url: jdbc:mysql://localhost:33060/tfg?useSSL=false
-    username: root
+    url: jdbc:mysql://localhost:3306/tfg?useSSL=false
+    username: ubuntuserver
     password: ubuntuserver
   jackson:
     serialization:
@@ -22,9 +22,6 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # property to avoid clob warning
 
 
-#    url: jdbc:mysql://localhost:3306/tfg?useSSL=false
-#    username: ubuntuserver
-#    password: ubuntuserver
 
 
 #redis:
