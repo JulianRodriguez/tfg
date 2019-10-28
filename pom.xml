@@ -6,7 +6,9 @@
 	<groupId>com.proyecto</groupId>
 	<artifactId>tfg</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
+
+	<!--	<packaging>jar</packaging>-->
 
 	<name>tfg</name>
 
