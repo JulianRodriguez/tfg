@@ -3,7 +3,7 @@ spring:
     enabled: false
   profile: local
   datasource:
-    url: jdbc:mysql://localhost:3306/tfg?useSSL=false
+    url: jdbc:mysql://34.65.68.159:3306/tfg?useSSL=false
     username: ubuntuserver
     password: ubuntuserver
   jackson:
@@ -20,6 +20,30 @@ spring:
         temp:
           use_jdbc_metadata_defaults: false # property to avoid clob warning
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # property to avoid clob warning
+
+#    LOCAL
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/tfg?useSSL=false
+#    username: ubuntuserver
+#    password: ubuntuserver
+
+#    CLOUD
+#    datasource:
+#      url: jdbc:mysql://34.65.68.159:3306/tfg?useSSL=false
+#      username: ubuntuserver
+#      password: ubuntuserver
+
+#  cloud:
+#    gcp:
+#  proyect−id: tfg-back
+#  sql:
+#    database−name: tfg
+#    instance−connection−name: tfg-back:europe-west6:tfg-back
+#  datasource:
+#    username: ubuntuserver
+#    password: ubuntuserver
+
+
 
 
 #redis:
