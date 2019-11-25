@@ -3,9 +3,9 @@ spring:
     enabled: false
   profile: local
   datasource:
-    url: jdbc:mysql://34.65.68.159:3306/tfg?useSSL=false
-    username: ubuntuserver
-    password: ubuntuserver
+    url: jdbc:mysql://bg-tfg-do-user-6789662-0.db.ondigitalocean.com:25060/defaultdb?useSSL=false
+    username: doadmin
+    password: vskeow2wlpk40iyt
   jackson:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
@@ -14,12 +14,44 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create-drop
-#      ddl-auto: update
+    #      ddl-auto: update
     properties:
       hibernate:
         temp:
           use_jdbc_metadata_defaults: false # property to avoid clob warning
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # property to avoid clob warning
+
+
+#spring:
+#  thymeleaf:
+#    enabled: false
+#  profile: local
+#  cloud:
+#    gcp:
+#  proyect−id: tfg-back
+#  sql:
+#    database−name: tfg
+#    instance−connection−name: tfg-back:europe-west6:tfg-back
+#  datasource:
+#    username: ubuntuserver
+#    password: ubuntuserver
+#  jackson:
+#    serialization:
+#      WRITE_DATES_AS_TIMESTAMPS: false
+#    time-zone: UTC
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create-drop
+#    #      ddl-auto: update
+#    properties:
+#      hibernate:
+#        temp:
+#          use_jdbc_metadata_defaults: false # property to avoid clob warning
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # property to avoid clob warning
+#
+
+
 
 #    LOCAL
 #  datasource:
