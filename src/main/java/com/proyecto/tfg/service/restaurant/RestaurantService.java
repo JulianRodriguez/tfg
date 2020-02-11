@@ -19,7 +19,7 @@ public interface RestaurantService extends Service<Restaurant, Long> {
     List<Restaurant> findRestaurantbyiduser(Long id, Pageable p) throws NotFoundException;
     Long restaurantTotal();
     Long restaurantSearchTotal(String name);
-
+    Long productTotalRestaurant(Long idRestaurant);
     List<Restaurant> findByName(String name, Pageable p) throws NotFoundException;
     List<Restaurant> findIdUserAndByName(Long id, String name, Pageable p) throws NotFoundException;
     Restaurant updateValores(Restaurant u, Restaurant y);

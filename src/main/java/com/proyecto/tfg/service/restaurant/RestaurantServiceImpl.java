@@ -132,4 +132,9 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
         to.setProduct(from.getProduct());
 
     }
+
+    @Override
+    public Long productTotalRestaurant(Long idRestaurant) {
+        return restaurantRepository.productTotales(idRestaurant);
+    }
 }

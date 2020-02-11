@@ -25,5 +25,10 @@ public interface RestaurantDAO extends GenericDAO<Restaurant> {
     @Query(value = "select r from Restaurant as q join q.product as r where q.idRestaurant = :idRestaurant and LOWER(r.name) LIKE %:name%")
     List<Product> findProductbyiduserandName (@Param("idRestaurant") Long idRestaurant,@Param("name") String name, Pageable pageable);
 
+    @Query(value = "select count(r) from Restaurant as p join p.product as r where p.idRestaurant = :idRestaurant")
+    Long productTotales(@Param("idRestaurant") Long idRestaurant);
+
+//    @Query(value = "select q from User as r join r.restaurant as q where r.idUser = :idUser")
+
 }
 
