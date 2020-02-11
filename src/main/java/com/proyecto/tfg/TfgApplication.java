@@ -218,7 +218,7 @@ public class TfgApplication {
 			restaurant.setProduct(prod1);
 			restaurants.add(restaurant);
 
-//			product.setRestaurant(restaurant);
+			product.setRestaurant(restaurant);
 
 			List<Restaurant> restaurants2 = new ArrayList<>();
 			Restaurant restaurant2 = new Restaurant();
@@ -227,8 +227,8 @@ public class TfgApplication {
 			restaurant2.setProduct(prod2);
 			restaurants2.add(restaurant2);
 
-//            product2.setRestaurant(restaurant2);
-//            product3.setRestaurant(restaurant2);
+            product2.setRestaurant(restaurant2);
+            product3.setRestaurant(restaurant2);
 
 			Restaurant restaurant3 = new Restaurant();
 			restaurant3.setNameRestaurant("BurgerKing");
@@ -236,7 +236,7 @@ public class TfgApplication {
 			restaurant3.setProduct(prod3);
 			restaurants2.add(restaurant3);
 
-//            product4.setRestaurant(restaurant3);
+            product4.setRestaurant(restaurant3);
 
 
 			//CREAMOS USUARIOS

@@ -26,6 +26,13 @@ public class Restaurant {
     @JoinColumn(name = FIELD_PRODUCT, referencedColumnName = FIELD_PRODUCT)
     private List<Product> product;
 
-
-
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "idRestaurant=" + idRestaurant +
+                ", nameRestaurant='" + nameRestaurant + '\'' +
+                ", descriptionRestaurant='" + descriptionRestaurant + '\'' +
+                ", product=" + product +
+                '}';
+    }
 }

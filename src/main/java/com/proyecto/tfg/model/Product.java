@@ -25,7 +25,7 @@ public class Product {
     @Column(columnDefinition="LONGTEXT")
     private String photo;
 
-//    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    private Restaurant restaurant;
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Restaurant restaurant;
 
 }

@@ -33,7 +33,7 @@ public class ProductMapperImpl extends AbstractMapper<Product, ProductDTO> imple
 //        System.out.println("MODELO");
 //        System.out.println(model.getRestaurant());
 //        System.out.println("FIN MODELO");
-//        dto.setNameRestaurant(model.getRestaurant().getNameRestaurant());
+        dto.setNameRestaurant(model.getRestaurant().getNameRestaurant());
 //        System.out.println("DTO");
 //        System.out.println(dto.getNameRestaurant());
 //        System.out.println("FIN DTO");

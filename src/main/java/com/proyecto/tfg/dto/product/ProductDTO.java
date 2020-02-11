@@ -10,5 +10,5 @@ public class ProductDTO {
     private String name;
     private String description;
     private String photo;
-//    private String nameRestaurant;
+    private String nameRestaurant;
 }
