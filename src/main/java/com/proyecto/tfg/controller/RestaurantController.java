@@ -61,7 +61,7 @@ public class RestaurantController extends AbstractController<Restaurant, Restaur
     @PutMapping("/{idRestaurant}")
     public void update(@PathVariable("idRestaurant") Long id, @RequestBody RestaurantDTO dto) throws InvalidRequestException, NotFoundException {
         if(dto.getIdRestaurant() != null)
-            throw new InvalidRequestException("El idUser no se puede recibir en el body");
+            throw new InvalidRequestException("El idRestaurante no se puede recibir en el body");
         final Restaurant restaurant = restaurantService.getAndCheck(id);
         System.out.println("Imprimo el dto");
         System.out.println(dto);

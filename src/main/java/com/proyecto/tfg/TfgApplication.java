@@ -186,6 +186,7 @@ public class TfgApplication {
 			product.setDescription("Plato de arroz muy rico. Hecho en cai");
 			product.setName("Paella Mixta");
 
+
 			Product product2 = new Product();
 			product2.setName("Hamburguesa de queso");
 			product2.setDescription("Famosa hamburguesa tipica de aqui");
@@ -217,6 +218,8 @@ public class TfgApplication {
 			restaurant.setProduct(prod1);
 			restaurants.add(restaurant);
 
+//			product.setRestaurant(restaurant);
+
 			List<Restaurant> restaurants2 = new ArrayList<>();
 			Restaurant restaurant2 = new Restaurant();
             restaurant2.setNameRestaurant("La Pepa");
@@ -224,11 +227,16 @@ public class TfgApplication {
 			restaurant2.setProduct(prod2);
 			restaurants2.add(restaurant2);
 
+//            product2.setRestaurant(restaurant2);
+//            product3.setRestaurant(restaurant2);
+
 			Restaurant restaurant3 = new Restaurant();
 			restaurant3.setNameRestaurant("BurgerKing");
 			restaurant3.setDescriptionRestaurant("Comida rápida copia de McDonald");
 			restaurant3.setProduct(prod3);
 			restaurants2.add(restaurant3);
+
+//            product4.setRestaurant(restaurant3);
 
 
 			//CREAMOS USUARIOS

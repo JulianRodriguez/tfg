@@ -25,12 +25,8 @@ public class Product {
     @Column(columnDefinition="LONGTEXT")
     private String photo;
 
-    //Aqui falta añadir la imagen
-
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    @JoinColumn(name = FIELD_INGREDIENT, referencedColumnName = FIELD_INGREDIENT)
-//    private List<Ingredient> ingredients;
-
-
+//    @Transient
+//    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    private Restaurant restaurant;
 
 }

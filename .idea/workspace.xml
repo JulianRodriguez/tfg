@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5bef921-bc3a-45ff-a761-a9db36cebd35" name="Default Changelist" comment="fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/CheckController.java" afterDir="false" />
+    <list default="true" id="b5bef921-bc3a-45ff-a761-a9db36cebd35" name="Default Changelist" comment="Añadido logging">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/tfg_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/tfg_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/product/ProductEditDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/config/security/CorsConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/config/security/CorsConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/config/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/config/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/CorsConfiguration$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/CorsConfiguration$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/CorsConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/CorsConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/TfgApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/TfgApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/product/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/product/ProductDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/producto/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/producto/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/producto/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/producto/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/service/producto/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/service/producto/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tfg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tfg.iml" afterDir="false" />
     </list>
     <list id="3527b13f-91be-4504-971a-68f1fcb8de7f" name="no vale" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_appengine_appengine_api_1_0_sdk_1_9_71.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_1.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_5_0_b01.xml" afterDir="false" />
@@ -24,6 +35,9 @@
       <change beforePath="$PROJECT_DIR$/target/backcontask-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/TfgApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/TfgApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/component/mapper/user/UserMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/component/mapper/user/UserMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/CorsConfiguration$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/CorsConfiguration$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/CorsConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/CorsConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/config/security/WebSecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/dao/UserDAO.class" afterDir="false" />
@@ -40,8 +54,8 @@
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tfg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tfg.iml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,18 +80,25 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - tfg@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="defaultdb@bg-tfg-do-user-6789662-0.db.ondigitalocean.com" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - tfg@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="defaultdb@bg-tfg-do-user-6789662-0.db.ondigitalocean.com" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - tfg@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="defaultdb@bg-tfg-do-user-6789662-0.db.ondigitalocean.com" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="tfg: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="defaultdb: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="defaultdb@bg-tfg-do-user-6789662-0.db.ondigitalocean.com" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="defaultdb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -99,6 +120,15 @@
       </set>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/tfg.iml">
+      <ranges>
+        <range start1="15" end1="16" start2="15" end2="18" changelist="b5bef921-bc3a-45ff-a761-a9db36cebd35" />
+        <range start1="18" end1="18" start2="20" end2="33" changelist="3527b13f-91be-4504-971a-68f1fcb8de7f" />
+        <range start1="136" end1="136" start2="151" end2="152" changelist="3527b13f-91be-4504-971a-68f1fcb8de7f" />
+      </ranges>
+    </file>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -116,6 +146,11 @@
   </component>
   <component name="ProjectId" id="1PmCuxR7hBjpEkHfz0Ss0foJ8Mo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -142,12 +177,13 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.proyecto.tfg.dto.restaurant" />
       <recent name="com.proyecto.tfg.dto.product" />
+      <recent name="com.proyecto.tfg.dto.restaurant" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jrodriguez.carave\IdeaProjects\tfg\src\main\java\com\proyecto\tfg\service\producto" />
@@ -156,18 +192,6 @@
       <recent name="C:\Users\jrodriguez.carave\Desktop\backConTask-feature-init\src\main\java\com\fot\backcontask\dao" />
       <recent name="C:\Users\jrodriguez.carave\Desktop\backConTask-feature-init\src\main\java\com\fot\backcontask\model" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.TfgApplication">
     <configuration name="TFG[]" type="MavenRunConfiguration" factoryName="Maven">
@@ -348,7 +372,19 @@
       <workItem from="1571755238200" duration="2532000" />
       <workItem from="1571999160267" duration="615000" />
       <workItem from="1572000582870" duration="2473000" />
-      <workItem from="1572253291492" duration="1218000" />
+      <workItem from="1572253291492" duration="13756000" />
+      <workItem from="1572355518116" duration="917000" />
+      <workItem from="1572516056445" duration="100000" />
+      <workItem from="1572516332935" duration="836000" />
+      <workItem from="1574676585944" duration="5306000" />
+      <workItem from="1578394646821" duration="59000" />
+      <workItem from="1580316646863" duration="112000" />
+      <workItem from="1580317145673" duration="1165000" />
+      <workItem from="1580714410070" duration="3055000" />
+      <workItem from="1580802230186" duration="3463000" />
+      <workItem from="1580974572316" duration="2901000" />
+      <workItem from="1581060890034" duration="9062000" />
+      <workItem from="1581320688091" duration="10866000" />
     </task>
     <task id="LOCAL-00001" summary="prueba">
       <created>1548141965676</created>
@@ -483,7 +519,112 @@
       <option name="project" value="LOCAL" />
       <updated>1568898201164</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="ultimos cambios">
+      <created>1572257452501</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1572257452501</updated>
+    </task>
+    <task id="LOCAL-00021" summary="nuevas dependencias">
+      <created>1572258628447</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1572258628447</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fix">
+      <created>1572261542982</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1572261542983</updated>
+    </task>
+    <task id="LOCAL-00023" summary="prueba Bd">
+      <created>1572262347784</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1572262347784</updated>
+    </task>
+    <task id="LOCAL-00024" summary="prueba Bd 2">
+      <created>1572262605827</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1572262605827</updated>
+    </task>
+    <task id="LOCAL-00025" summary="prueba Bd 2 cloud">
+      <created>1572264889466</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1572264889466</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix xml">
+      <created>1572266604063</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1572266604063</updated>
+    </task>
+    <task id="LOCAL-00027" summary="cambio en el pom">
+      <created>1572266921311</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1572266921311</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Nuevas dependencias jetty">
+      <created>1572268839796</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1572268839796</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Añadido logging Y BD">
+      <created>1572269195038</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1572269195038</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Añadido war">
+      <created>1572270579259</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1572270579259</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Añadido configuracion">
+      <created>1572271105145</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1572271105145</updated>
+    </task>
+    <task id="LOCAL-00032" summary="cambio version cloud tools">
+      <created>1572355718023</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1572355718023</updated>
+    </task>
+    <task id="LOCAL-00033" summary="cambio de BD">
+      <created>1574681173516</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1574681173516</updated>
+    </task>
+    <task id="LOCAL-00034" summary="cambio de bd">
+      <created>1574682734927</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1574682734927</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,26 +658,110 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="prueba" />
-    <MESSAGE value="Arreglo de Restaurant" />
-    <MESSAGE value="Cambios en restaurante y usuarios" />
-    <MESSAGE value="Añadida query Restaurant" />
-    <MESSAGE value="Arreglos para el front" />
-    <MESSAGE value="salida por consola de la bd" />
-    <MESSAGE value="cambio en los controladores" />
-    <MESSAGE value="Paginate" />
-    <MESSAGE value="Total de User buscados" />
     <MESSAGE value="Total de user buscados" />
     <MESSAGE value="Searchtotal de Restaurante" />
     <MESSAGE value="Searchtotal de Producto" />
     <MESSAGE value="obtener los restaurantes por id y por name" />
-    <MESSAGE value="fix" />
     <MESSAGE value="Añadido editRestaurant y foto" />
     <MESSAGE value="Cambio dto" />
     <MESSAGE value="checkuser y checkemail" />
     <MESSAGE value="Modificar contraseña" />
     <MESSAGE value="envio de correos, seguridad y nuevos controladores" />
-    <option name="LAST_COMMIT_MESSAGE" value="envio de correos, seguridad y nuevos controladores" />
+    <MESSAGE value="ultimos cambios" />
+    <MESSAGE value="nuevas dependencias" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="prueba Bd" />
+    <MESSAGE value="prueba Bd 2" />
+    <MESSAGE value="prueba Bd 2 cloud" />
+    <MESSAGE value="fix xml" />
+    <MESSAGE value="cambio en el pom" />
+    <MESSAGE value="Nuevas dependencias jetty" />
+    <MESSAGE value="Añadido logging" />
+    <MESSAGE value="Añadido logging Y BD" />
+    <MESSAGE value="Añadido war" />
+    <MESSAGE value="Añadido configuracion" />
+    <MESSAGE value="cambio version cloud tools" />
+    <MESSAGE value="cambio de BD" />
+    <MESSAGE value="cambio de bd" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio de bd" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1581342689298">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581342689298" />
+    <state x="-1185" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1581340646614">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1185" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581340646614" />
+    <state width="1877" height="303" key="GridCell.Tab.0.bottom" timestamp="1581347392133">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581347392133" />
+    <state width="1877" height="303" key="GridCell.Tab.0.center" timestamp="1581347392133">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581347392133" />
+    <state width="1877" height="303" key="GridCell.Tab.0.left" timestamp="1581347392132">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581347392132" />
+    <state width="1877" height="303" key="GridCell.Tab.0.right" timestamp="1581347392133">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581347392133" />
+    <state width="1877" height="303" key="GridCell.Tab.1.bottom" timestamp="1581347392133">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.1.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581347392133" />
+    <state width="1877" height="303" key="GridCell.Tab.1.center" timestamp="1581347392133">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.1.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581347392133" />
+    <state width="1877" height="303" key="GridCell.Tab.1.left" timestamp="1581347392133">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.1.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581347392133" />
+    <state width="1877" height="303" key="GridCell.Tab.1.right" timestamp="1581347392133">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.1.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581347392133" />
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom" timestamp="1581341309553">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581341309553" />
+    <state width="1877" height="347" key="GridCell.Tab.2.center" timestamp="1581341309552">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.2.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581341309552" />
+    <state width="1877" height="347" key="GridCell.Tab.2.left" timestamp="1581341309552">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.2.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581341309552" />
+    <state width="1877" height="347" key="GridCell.Tab.2.right" timestamp="1581341309553">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581341309553" />
+    <state x="-1459" y="163" key="SettingsEditor" timestamp="1580807603951">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1459" y="163" key="SettingsEditor/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580807603951" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapperImpl.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapperImpl.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

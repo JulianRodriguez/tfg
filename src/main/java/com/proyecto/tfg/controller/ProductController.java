@@ -3,6 +3,7 @@ package com.proyecto.tfg.controller;
 import com.proyecto.tfg.component.mapper.product.ProductMapper;
 import com.proyecto.tfg.dto.ApiErrorDTO;
 import com.proyecto.tfg.dto.product.ProductDTO;
+import com.proyecto.tfg.dto.product.ProductEditDTO;
 import com.proyecto.tfg.dto.restaurant.RestaurantDTO;
 import com.proyecto.tfg.exception.InvalidRequestException;
 import com.proyecto.tfg.exception.NotFoundException;
@@ -10,6 +11,7 @@ import com.proyecto.tfg.model.Product;
 //import org.springframework.web.bind.annotation.RequestMapping;
 //import org.springframework.web.bind.annotation.RestController;
 
+import com.proyecto.tfg.model.Restaurant;
 import com.proyecto.tfg.service.producto.ProductService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -60,4 +62,19 @@ public class ProductController extends AbstractController<Product, ProductDTO> {
         final Long totaldeProductsSearch = productService.productSearchTotal(searchName);
         return totaldeProductsSearch;
     }
+
+
+    @PutMapping("/{idProduct}")
+    public void update(@PathVariable("idProduct") Long id, @RequestBody ProductDTO dto) throws InvalidRequestException, NotFoundException {
+        if(dto.getIdProduct() != null)
+            throw new InvalidRequestException("El idProduct no se puede recibir en el body");
+        final Product product = productService.getAndCheck(id);
+        System.out.println("Imprimo el dto");
+        System.out.println(dto);
+        System.out.println(product);
+        final Product productFrom = productMapper.dtoToModel(dto);
+        final Product productTo = productService.updateValores(product, productFrom);
+        productService.update(productTo);
+    }
+
 }

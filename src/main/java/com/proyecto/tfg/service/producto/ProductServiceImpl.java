@@ -55,6 +55,18 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
     }
 
     @Override
+    public Product updateValores(Product u, Product y) {
+        if(y.getName() != null)
+            u.setName(y.getName());
+        if(y.getDescription() != null)
+            u.setDescription(y.getDescription());
+        if(y.getPhoto() != null)
+            u.setPhoto(y.getPhoto());
+        return u;
+
+    }
+
+    @Override
     public Optional<Product> getById(Long idProduct) throws NotFoundException {
         return productRespository.findById(idProduct);
     }
@@ -102,6 +114,7 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
     public Long productSearchTotal(String name) {
         return productRespository.productSearchTotal(name);
     }
+
 
 
 }

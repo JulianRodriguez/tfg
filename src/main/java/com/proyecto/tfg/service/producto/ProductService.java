@@ -3,6 +3,7 @@ package com.proyecto.tfg.service.producto;
 import com.proyecto.tfg.dto.product.ProductDTO;
 import com.proyecto.tfg.exception.NotFoundException;
 import com.proyecto.tfg.model.Product;
+import com.proyecto.tfg.model.Restaurant;
 import com.proyecto.tfg.service.Service;
 import org.springframework.data.domain.Pageable;
 
@@ -19,6 +20,7 @@ public interface ProductService extends Service<Product, Long> {
     List<Product> findByName(String name, Pageable p) throws NotFoundException;
     Long productSearchTotal(String name);
     List<Product> findProductbyiduser(Long id,String name, Pageable p) throws NotFoundException;
+    Product updateValores(Product u, Product y);
 
 
 

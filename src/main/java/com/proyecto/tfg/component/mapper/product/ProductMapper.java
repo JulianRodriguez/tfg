@@ -7,6 +7,8 @@ import com.proyecto.tfg.model.Product;
 import com.proyecto.tfg.component.mapper.Mapper;
 import com.proyecto.tfg.model.Restaurant;
 
+import java.util.List;
+
 public interface ProductMapper extends Mapper<Product, ProductDTO> {
 
     Product dtoToModel(ProductDTO dto) throws NotFoundException;
