@@ -70,5 +70,11 @@ public class RestaurantController extends AbstractController<Restaurant, Restaur
         restaurantService.update(restaurantTo);
     }
 
+    @GetMapping("/{idRestaurant}/product/total")
+    public Long findTotal(@PathVariable("idRestaurant") Long id) throws NotFoundException {
+        final Long totaldeProduct = restaurantService.productTotalRestaurant(id);
+        return totaldeProduct;
+    }
+
 
 }
