@@ -48,4 +48,4 @@
 #          use_jdbc_metadata_defaults: false # property to avoid clob warning
 #    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # property to avoid clob warning
 #
-#
+
