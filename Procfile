@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/tfg-0.0.1-SNAPSHOT.jar
+web: java $JAVA_OPTS -cp target/classes:target/tfg-0.0.1-SNAPSHOT.war
