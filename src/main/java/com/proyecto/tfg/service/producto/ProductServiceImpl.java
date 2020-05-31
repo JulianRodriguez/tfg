@@ -78,9 +78,8 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
 
     @Override
     public void addtorestaurant(Long idRestaurant, ProductDTO productDTO) throws NotFoundException {
-        final Restaurant restaurant = restaurantService.getRestaurant(idRestaurant);
         final Product product = productService.create(productDTO);
-        restaurantService.addtoproduct(restaurant,product);
+        restaurantService.addtoproduct(idRestaurant,product);
     }
 
 
