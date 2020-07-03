@@ -8,4 +8,6 @@ public class ProductEditDTO {
     private Long idProduct;
     private String name;
     private String description;
+    private String photo;
+
 }
