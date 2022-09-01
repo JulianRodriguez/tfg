@@ -11,7 +11,6 @@ public class Product {
 
     public static final String FIELD_INGREDIENT = "idProduct";
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idProduct;
@@ -28,4 +27,13 @@ public class Product {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Restaurant restaurant;
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "idProduct=" + idProduct +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
+    }
 }

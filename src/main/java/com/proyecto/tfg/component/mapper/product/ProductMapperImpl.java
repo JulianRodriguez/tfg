@@ -40,4 +40,23 @@ public class ProductMapperImpl extends AbstractMapper<Product, ProductDTO> imple
         return dto;
     }
 
+    @Override
+    public Product objectToProduct(Object obj) {
+        Product p = null;
+//        p.setName();
+//        p.setPhoto();
+//        p.setDescription();
+////        p.setIdProduct(obj.);
+        return p;
+    }
+
+    @Override
+    public ProductDTO modelToDTO(Product model) {
+        ProductDTO dto = null;
+        dto.setName(model.getName());
+        dto.setDescription(model.getDescription());
+        dto.setPhoto(model.getPhoto());
+
+        return dto;
+    }
 }

@@ -4,6 +4,7 @@ import com.proyecto.tfg.dto.email.EmailDTO;
 import com.proyecto.tfg.dto.user.UserDTO;
 import com.proyecto.tfg.exception.NotFoundException;
 import com.proyecto.tfg.model.User;
+import com.proyecto.tfg.service.email.EmailService;
 import com.proyecto.tfg.service.user.UserService;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -38,7 +39,7 @@ public class EmailController {
     private String[] symbols = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};
 
     @Autowired
-    UserService userService;
+    private EmailService emailService;
 
     @Autowired
     private JavaMailSender javaMailSender;
@@ -48,45 +49,8 @@ public class EmailController {
     public boolean sendEmail3(@RequestBody EmailDTO dto) throws NotFoundException, NoSuchAlgorithmException {
 
         System.out.println(dto);
-        valido = false;
-        if(dto.getEmail() != null) {
-            if (userService.CheckByEmail(dto.getEmail())) {
-
-                int length = 10;
-                Random random = SecureRandom.getInstanceStrong(); // as of JDK 8, this should return the strongest algorithm available to the JVM
-                StringBuilder sb = new StringBuilder(length);
-                for (int i = 0; i < length; i++) {
-                    int indexRandom = random.nextInt(symbols.length);
-                    sb.append(symbols[indexRandom]);
-                }
-                String passwordGenerated = sb.toString();
-                System.out.println(passwordGenerated);
-
-                try {
-                    User user = userService.getUserWithEmail(dto.getEmail());
-                    String encryptPassword = Optional.ofNullable(passwordGenerated).map(DigestUtils::sha1Hex).orElse(StringUtils.EMPTY);
-                    user.setPassword(encryptPassword);
-                    userService.update(user);
-
-                    SimpleMailMessage msg = new SimpleMailMessage();
-                    msg.setTo(dto.getEmail());
-
-                    msg.setSubject("Testing from Spring Boot");
-                    msg.setText("Las contraseña nueva es: " + passwordGenerated);
-
-                    javaMailSender.send(msg);
-
-
-                } catch (Exception e) {
-                    e.getMessage();
-                }
-
-                valido = true;
-            }
-
-        }
-        return valido;
-
+        boolean result = emailService.sendSimpleMail(dto);
+        return result;
     }
 
 }

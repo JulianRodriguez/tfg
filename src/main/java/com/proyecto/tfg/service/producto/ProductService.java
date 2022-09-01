@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface ProductService extends Service<Product, Long> {
 
     void addtorestaurant(Long idRestaurant, ProductDTO productDTO)throws NotFoundException;
-    Product create(ProductDTO productDTO);
+    Product create(ProductDTO productDTO, Restaurant restaurant);
     List<Product> getAll(Long idRestaurant)throws NotFoundException;
     Optional<Product> getById(Long idProduct)throws NotFoundException;
     Long productTotal();
@@ -21,6 +21,7 @@ public interface ProductService extends Service<Product, Long> {
     Long productSearchTotal(String name);
     List<Product> findProductbyiduser(Long id,String name, Pageable p) throws NotFoundException;
     Product updateValores(Product u, Product y);
+    Product getProduct(Long id) throws NotFoundException;
 
 
 

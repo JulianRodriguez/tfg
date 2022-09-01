@@ -12,6 +12,8 @@ import java.util.List;
 public interface ProductMapper extends Mapper<Product, ProductDTO> {
 
     Product dtoToModel(ProductDTO dto) throws NotFoundException;
+    Product objectToProduct(Object obj);
+    ProductDTO modelToDTO(Product model);
 
 }
 

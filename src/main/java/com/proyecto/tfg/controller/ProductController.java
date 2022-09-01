@@ -66,15 +66,25 @@ public class ProductController extends AbstractController<Product, ProductDTO> {
 
     @PutMapping("/{idProduct}")
     public void update(@PathVariable("idProduct") Long id, @RequestBody ProductDTO dto) throws InvalidRequestException, NotFoundException {
-        if(dto.getIdProduct() != null)
-            throw new InvalidRequestException("El idProduct no se puede recibir en el body");
-        final Product product = productService.getAndCheck(id);
-        System.out.println("Imprimo el dto");
-        System.out.println(dto);
-        System.out.println(product);
-        final Product productFrom = productMapper.dtoToModel(dto);
-        final Product productTo = productService.updateValores(product, productFrom);
-        productService.update(productTo);
+
+        try{
+            if(dto.getIdProduct() != null)
+                throw new InvalidRequestException("El idProduct no se puede recibir en el body");
+            final Product product = productService.getProduct(id);
+            final Product productFrom = productMapper.dtoToModel(dto);
+            final Product productTo = productService.updateValores(product, productFrom);
+            productService.update(productTo);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    @GetMapping("/{id}")
+    public ProductDTO findById(@PathVariable("id") Long id) throws NotFoundException {
+        final Product model = productService.getProduct(id);
+        final ProductDTO modelDto = productMapper.modelToDto(model);
+        return modelDto;
     }
 
 }

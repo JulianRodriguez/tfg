@@ -2,12 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5bef921-bc3a-45ff-a761-a9db36cebd35" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/email/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/email/EmailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/TfgApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/TfgApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/product/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/product/ProductDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/config/security/CorsConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/config/security/CorsConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/AbstractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/EmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/EmailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/email/EmailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/email/EmailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/user/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/user/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/user/UserPostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/dto/user/UserPostDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/model/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/producto/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/producto/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/producto/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/producto/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/dao/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/service/producto/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyecto/tfg/service/producto/ProductService.class" afterDir="false" />
     </list>
     <list id="3527b13f-91be-4504-971a-68f1fcb8de7f" name="no vale" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
@@ -86,7 +105,7 @@
         <item name="defaultdb@bg-tfg-do-user-6789662-0.db.ondigitalocean.com" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="defaultdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="product: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -120,11 +139,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="PhpServers">
-    <servers />
-  </component>
   <component name="ProjectId" id="1PmCuxR7hBjpEkHfz0Ss0foJ8Mo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -137,6 +155,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -146,7 +165,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549468281499" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bankia/adaptadormadpoolconfserviciossd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../codeTransaction" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -156,7 +175,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
@@ -365,6 +387,51 @@
       <workItem from="1581060890034" duration="9062000" />
       <workItem from="1581320688091" duration="10866000" />
       <workItem from="1581406614645" duration="7005000" />
+      <workItem from="1581491632306" duration="2625000" />
+      <workItem from="1581578230922" duration="1966000" />
+      <workItem from="1581665097389" duration="1545000" />
+      <workItem from="1581924172491" duration="10000" />
+      <workItem from="1583497471531" duration="2802000" />
+      <workItem from="1583738247011" duration="4401000" />
+      <workItem from="1583755341932" duration="3255000" />
+      <workItem from="1584026356646" duration="97000" />
+      <workItem from="1585306215736" duration="12000" />
+      <workItem from="1585306568043" duration="5818000" />
+      <workItem from="1585344819018" duration="1191000" />
+      <workItem from="1585415127929" duration="424000" />
+      <workItem from="1585495953317" duration="610000" />
+      <workItem from="1585508282259" duration="125000" />
+      <workItem from="1587418945228" duration="594000" />
+      <workItem from="1590943514660" duration="1253000" />
+      <workItem from="1591338063283" duration="86000" />
+      <workItem from="1597398134293" duration="1014000" />
+      <workItem from="1597749691345" duration="671000" />
+      <workItem from="1597824168317" duration="3395000" />
+      <workItem from="1598257253291" duration="34000" />
+      <workItem from="1598341767839" duration="757000" />
+      <workItem from="1598439176910" duration="987000" />
+      <workItem from="1599639814282" duration="677000" />
+      <workItem from="1599731247359" duration="1272000" />
+      <workItem from="1600787619035" duration="41000" />
+      <workItem from="1602147191250" duration="595000" />
+      <workItem from="1658077797149" duration="1490000" />
+      <workItem from="1658088632876" duration="1610000" />
+      <workItem from="1658171025094" duration="235000" />
+      <workItem from="1658222637508" duration="742000" />
+      <workItem from="1658223981914" duration="649000" />
+      <workItem from="1658224887843" duration="976000" />
+      <workItem from="1658230511308" duration="1255000" />
+      <workItem from="1658246314635" duration="2033000" />
+      <workItem from="1658424409936" duration="3928000" />
+      <workItem from="1658502846435" duration="6097000" />
+      <workItem from="1658679737472" duration="7222000" />
+      <workItem from="1658738402289" duration="1162000" />
+      <workItem from="1658763547483" duration="885000" />
+      <workItem from="1658992769111" duration="48000" />
+      <workItem from="1658992893172" duration="105000" />
+      <workItem from="1661292290284" duration="5546000" />
+      <workItem from="1662024808678" duration="23000" />
+      <workItem from="1662028670119" duration="193000" />
     </task>
     <task id="LOCAL-00001" summary="prueba">
       <created>1548141965676</created>
@@ -687,124 +754,177 @@
     <option name="LAST_COMMIT_MESSAGE" value="obtener los productos de un restaurante en particular" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1581420241589">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1658077886507">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581420241589" />
-    <state x="-1185" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1581340646614">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1658077886507" />
+    <state x="-1475" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1658684428892">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state x="-1185" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581340646614" />
-    <state x="-1335" y="114" key="CommitChangelistDialog2" timestamp="1581418558950">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="-1475" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658684428892" />
+    <state x="-1484" y="406" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1658683047236">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state x="-1335" y="114" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581418558950" />
-    <state width="1877" height="303" key="GridCell.Tab.0.bottom" timestamp="1581434335022">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="-1484" y="406" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658683047236" />
+    <state x="-1498" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1658424871062">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581434335022" />
-    <state width="1877" height="303" key="GridCell.Tab.0.center" timestamp="1581434335021">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="-1498" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658424871062" />
+    <state x="-1699" y="114" key="CommitChangelistDialog2" timestamp="1662028946944">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581434335021" />
-    <state width="1877" height="303" key="GridCell.Tab.0.left" timestamp="1581434335021">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="-1699" y="114" key="CommitChangelistDialog2/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1662028946944" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1658077998424">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581434335021" />
-    <state width="1877" height="303" key="GridCell.Tab.0.right" timestamp="1581434335021">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1658077998424" />
+    <state width="2517" height="218" key="GridCell.Tab.0.bottom" timestamp="1658764450204">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581434335021" />
-    <state width="1877" height="303" key="GridCell.Tab.1.bottom" timestamp="1581434335022">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="218" key="GridCell.Tab.0.bottom/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658764450204" />
+    <state width="1237" height="280" key="GridCell.Tab.0.bottom/0.0.1280.680/-2560.0.2560.1040@0.0.1280.680" timestamp="1658298128556" />
+    <state width="2517" height="218" key="GridCell.Tab.0.center" timestamp="1658764450204">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.1.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581434335022" />
-    <state width="1877" height="303" key="GridCell.Tab.1.center" timestamp="1581434335022">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="218" key="GridCell.Tab.0.center/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658764450204" />
+    <state width="1237" height="280" key="GridCell.Tab.0.center/0.0.1280.680/-2560.0.2560.1040@0.0.1280.680" timestamp="1658298128554" />
+    <state width="2517" height="218" key="GridCell.Tab.0.left" timestamp="1658764450204">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.1.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581434335022" />
-    <state width="1877" height="303" key="GridCell.Tab.1.left" timestamp="1581434335022">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="218" key="GridCell.Tab.0.left/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658764450204" />
+    <state width="1237" height="280" key="GridCell.Tab.0.left/0.0.1280.680/-2560.0.2560.1040@0.0.1280.680" timestamp="1658298128553" />
+    <state width="2517" height="218" key="GridCell.Tab.0.right" timestamp="1658764450204">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.1.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581434335022" />
-    <state width="1877" height="303" key="GridCell.Tab.1.right" timestamp="1581434335022">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="218" key="GridCell.Tab.0.right/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658764450204" />
+    <state width="1237" height="280" key="GridCell.Tab.0.right/0.0.1280.680/-2560.0.2560.1040@0.0.1280.680" timestamp="1658298128556" />
+    <state width="2517" height="218" key="GridCell.Tab.1.bottom" timestamp="1658764450205">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.1.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581434335022" />
-    <state width="1877" height="347" key="GridCell.Tab.2.bottom" timestamp="1581420384257">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="218" key="GridCell.Tab.1.bottom/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658764450205" />
+    <state width="1237" height="280" key="GridCell.Tab.1.bottom/0.0.1280.680/-2560.0.2560.1040@0.0.1280.680" timestamp="1658298128557" />
+    <state width="2517" height="218" key="GridCell.Tab.1.center" timestamp="1658764450205">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581420384257" />
-    <state width="1877" height="347" key="GridCell.Tab.2.center" timestamp="1581420384256">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="218" key="GridCell.Tab.1.center/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658764450205" />
+    <state width="1237" height="280" key="GridCell.Tab.1.center/0.0.1280.680/-2560.0.2560.1040@0.0.1280.680" timestamp="1658298128557" />
+    <state width="2517" height="218" key="GridCell.Tab.1.left" timestamp="1658764450205">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581420384256" />
-    <state width="1877" height="347" key="GridCell.Tab.2.left" timestamp="1581420384256">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="218" key="GridCell.Tab.1.left/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658764450205" />
+    <state width="1237" height="280" key="GridCell.Tab.1.left/0.0.1280.680/-2560.0.2560.1040@0.0.1280.680" timestamp="1658298128557" />
+    <state width="2517" height="218" key="GridCell.Tab.1.right" timestamp="1658764450205">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581420384256" />
-    <state width="1877" height="347" key="GridCell.Tab.2.right" timestamp="1581420384257">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="218" key="GridCell.Tab.1.right/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658764450205" />
+    <state width="1237" height="280" key="GridCell.Tab.1.right/0.0.1280.680/-2560.0.2560.1040@0.0.1280.680" timestamp="1658298128557" />
+    <state width="2517" height="242" key="GridCell.Tab.2.bottom" timestamp="1658745582061">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581420384257" />
-    <state x="-1459" y="163" key="SettingsEditor" timestamp="1580807603951">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="242" key="GridCell.Tab.2.bottom/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658745582061" />
+    <state width="2517" height="242" key="GridCell.Tab.2.center" timestamp="1658745582061">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state x="-1459" y="163" key="SettingsEditor/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580807603951" />
-    <state x="-1368" y="254" key="Vcs.Push.Dialog.v2" timestamp="1581418613046">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="242" key="GridCell.Tab.2.center/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658745582061" />
+    <state width="2517" height="242" key="GridCell.Tab.2.left" timestamp="1658745582061">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state x="-1368" y="254" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581418613046" />
-    <state x="-1442" y="110" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581420176559">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="2517" height="242" key="GridCell.Tab.2.left/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658745582061" />
+    <state width="2517" height="242" key="GridCell.Tab.2.right" timestamp="1658745582061">
+      <screen x="-2560" y="0" width="2560" height="1040" />
     </state>
-    <state x="-1442" y="110" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581420176559" />
+    <state width="2517" height="242" key="GridCell.Tab.2.right/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658745582061" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1658078677001">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1658078677001" />
+    <state x="-1471" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1658425844570">
+      <screen x="-2560" y="0" width="2560" height="1040" />
+    </state>
+    <state x="-1471" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658425844570" />
+    <state x="-1649" y="65" width="737" height="909" key="find.popup" timestamp="1658088806160">
+      <screen x="-2560" y="0" width="2560" height="1040" />
+    </state>
+    <state x="-1649" y="65" width="737" height="909" key="find.popup/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658088806160" />
+    <state x="-1624" y="240" key="run.anything.popup" timestamp="1658567130877">
+      <screen x="-2560" y="0" width="2560" height="1040" />
+    </state>
+    <state x="-1624" y="240" key="run.anything.popup/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658567130877" />
+    <state x="-1617" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1658683261585">
+      <screen x="-2560" y="0" width="2560" height="1040" />
+    </state>
+    <state x="-1617" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/-2560.0.2560.1040@-2560.0.2560.1040" timestamp="1658683261585" />
+    <state x="472" y="147" width="672" height="444" key="search.everywhere.popup/0.0.1280.680/-2560.0.2560.1040@0.0.1280.680" timestamp="1658231180303" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapperImpl.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapperImpl.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java</url>
-          <line>56</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/email/EmailServiceImpl.java</url>
+          <line>75</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/email/EmailServiceImpl.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/AbstractController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/AbstractService.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/component/mapper/product/ProductMapperImpl.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/ProductController.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/controller/RestaurantProductController.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/proyecto/tfg/service/producto/ProductServiceImpl.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8.0_191</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

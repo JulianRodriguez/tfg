@@ -183,21 +183,18 @@ public class TfgApplication {
             //CREAMOS Productos
 
 			Product product = new Product();
-			product.setDescription("Plato de arroz muy rico. Hecho en cai");
+			product.setDescription("es en la actualidad la llamada paella marinera, que lleva arroz, pescados, moluscos y/o mariscos. En este caso, el arroz se cuece en caldo de pescado.");
 			product.setName("Paella Mixta");
 
 
 			Product product2 = new Product();
-			product2.setName("Hamburguesa de queso");
-			product2.setDescription("Famosa hamburguesa tipica de aqui");
+			product2.setName("Tierra Blanca semidulce");
+			product2.setDescription("Inglaterra al que le seguirían en el siglo XIX los grandes tintos.");
 
 			Product product3 = new Product();
 			product3.setName("Carrillada");
-			product3.setDescription("carnecita muy rica");
+			product3.setDescription("ratis, además, te enseñamos a cocinar la carrillada en salsa de la abuela, es decir, la receta de toda la vida, con una salsa espesa y deliciosa.");
 
-			Product product4 = new Product();
-			product4.setName("Salchicha");
-			product4.setDescription("bbb");
 
 			List<Product> prod1 = new ArrayList<>();
 			List<Product> prod2 = new ArrayList<>();
@@ -206,7 +203,6 @@ public class TfgApplication {
 			prod1.add(product);
 			prod2.add(product2);
 			prod2.add(product3);
-			prod3.add(product4);
 
 
 			//CREAMOS RESTAURANTE
@@ -222,8 +218,8 @@ public class TfgApplication {
 
 			List<Restaurant> restaurants2 = new ArrayList<>();
 			Restaurant restaurant2 = new Restaurant();
-            restaurant2.setNameRestaurant("La Pepa");
-            restaurant2.setDescriptionRestaurant("Cerveza artesanal y tapas variadas");
+            restaurant2.setNameRestaurant("Osborne");
+            restaurant2.setDescriptionRestaurant("s y volveremos a celebrar la vida como solo nosotros sabemos.");
 			restaurant2.setProduct(prod2);
 			restaurants2.add(restaurant2);
 
@@ -236,7 +232,6 @@ public class TfgApplication {
 			restaurant3.setProduct(prod3);
 			restaurants2.add(restaurant3);
 
-            product4.setRestaurant(restaurant3);
 
 
 			//CREAMOS USUARIOS
@@ -246,7 +241,7 @@ public class TfgApplication {
 
             admin.setName("Julian Rodriguez Carave");
             admin.setUsername("julito");
-            admin.setEmail("j@gmail.com");
+            admin.setEmail("julitoemail@yopmail.com");
             admin.setPhone("667884995");
             admin.setPassword(DigestUtils.sha1Hex("123456"));
             admin.setRole(r1);

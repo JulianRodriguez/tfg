@@ -34,11 +34,12 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
     RestaurantDAO restaurantDAO;
 
     @Override
-    public Product create(ProductDTO productDTO) {
+    public Product create(ProductDTO productDTO, Restaurant restaurant) {
         final Product product = new Product();
         product.setName(productDTO.getName());
         product.setDescription(productDTO.getDescription());
         product.setPhoto(productDTO.getPhoto());
+        product.setRestaurant(restaurant);
         return productRespository.save(product);
     }
 
@@ -79,14 +80,25 @@ public class ProductServiceImpl extends AbstractService<Product, ProductDAO> imp
     @Override
     public void addtorestaurant(Long idRestaurant, ProductDTO productDTO) throws NotFoundException {
         final Restaurant restaurant = restaurantService.getRestaurant(idRestaurant);
-        final Product product = productService.create(productDTO);
+        final Product product = productService.create(productDTO,restaurant);
         restaurantService.addtoproduct(restaurant,product);
     }
 
 
     @Override
+    public Product getProduct(Long id) throws NotFoundException {
+        try{
+            final Product product2 = productRespository.findByIdProduct(id);
+
+            return product2;
+        }catch (Exception e){
+            throw new NotFoundException("El producto no existe");
+        }
+    }
+
+    @Override
     public Product getAndCheck(Long id) throws NotFoundException {
-        return findById(id).orElseThrow(() -> new NotFoundException("El producto no existe"));
+        return null;
     }
 
     @Override

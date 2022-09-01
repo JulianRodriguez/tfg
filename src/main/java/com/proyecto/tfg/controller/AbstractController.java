@@ -69,4 +69,6 @@ public abstract class AbstractController<T, E> {
 			throw new InvalidRequestException("El " + mapper.modelClazz() + " recibido no coincide con el almacenado");
 		service.delete(model);
 	}
+
+
 }
