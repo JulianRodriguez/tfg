@@ -1,6 +1,7 @@
 package com.proyecto.tfg.service.restaurant;
 
 
+import com.proyecto.tfg.dao.ProductDAO;
 import com.proyecto.tfg.dao.RestaurantDAO;
 import com.proyecto.tfg.dao.UserDAO;
 import com.proyecto.tfg.dto.restaurant.RestaurantDTO;
@@ -24,6 +25,9 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
 
     @Autowired
     private RestaurantDAO restaurantRepository;
+
+    @Autowired
+    private ProductDAO productDAO;
 
     @Autowired
     private UserDAO userDAO;
@@ -72,9 +76,12 @@ public class RestaurantServiceImpl extends AbstractService<Restaurant, Restauran
     }
 
     @Override
-    public void addtoproduct(Restaurant restaurant, Product product) {
-        restaurant.getProduct().add(product);
-        restaurantRepository.save(restaurant);
+    public void addtoproduct(Long idRestaurant, Product product) throws NotFoundException {
+        Restaurant r = getRestaurant(idRestaurant);
+        r.getProduct().add(product);
+        restaurantRepository.save(r);
+        product.setRestaurant(r);
+        productDAO.save(product);
     }
 
     @Override
