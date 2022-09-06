@@ -1,0 +1,10 @@
+
+S
+java:S1128">Remove this unused import 'com.proyecto.tfg.model.Restaurant'.(ý§“Q
+e
+java:S1128"JRemove this unused import 'com.proyecto.tfg.dto.restaurant.RestaurantDTO'.(þ©„¡üÿÿÿÿ
+F
+java:S1128
+"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+±
+java:S1845"šRename method "modelToDTO" to prevent any misunderstanding/clash with method "modelToDto" defined in interface "com.proyecto.tfg.component.mapper.Mapper".(ª·¬Á

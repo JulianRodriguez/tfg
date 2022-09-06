@@ -1,0 +1,28 @@
+
+j
+java:S1192T"ODefine a constant instead of duplicating this literal "Imprimo el dto" 3 times.(®è¢ıüÿÿÿÿ
+~
+java:S1488M"cImmediately return this expression instead of assigning it to the temporary variable "totaldeUser".(§°ˆ±üÿÿÿÿ
+
+java:S1488r"iImmediately return this expression instead of assigning it to the temporary variable "totaldeUserSearch".(ÙìÂ™
+c
+java:S1128"MRemove this unused import 'org.springframework.mail.javamail.JavaMailSender'.(ÕÃ›
+C
+java:S1128"-Remove this unused import 'java.util.Base64'.(ëŠ»Õ
+W
+java:S1128"ARemove this unused import 'java.io.UnsupportedEncodingException'.(Ãµ…“
+S	java:S106B"9Replace this use of System.out or System.err by a logger.(ôØáÆıÿÿÿÿ
+S	java:S106F"9Replace this use of System.out or System.err by a logger.(ĞÉÇúÿÿÿÿ
+S	java:S106G"9Replace this use of System.out or System.err by a logger.(´ûüÿÿÿÿ
+œ
+java:S1130L"…Remove the declaration of thrown exception 'com.proyecto.tfg.exception.NotFoundException', as it cannot be thrown from method's body.(ÏÒíá
+S	java:S106T"9Replace this use of System.out or System.err by a logger.(®è¢ıüÿÿÿÿ
+N	java:S106U"9Replace this use of System.out or System.err by a logger.(ªìá¶
+N	java:S106Y"9Replace this use of System.out or System.err by a logger.(†¨§š
+N	java:S106Z"9Replace this use of System.out or System.err by a logger.(öÄ¯ò
+S	java:S106]"9Replace this use of System.out or System.err by a logger.(®è¢ıüÿÿÿÿ
+S	java:S106i"9Replace this use of System.out or System.err by a logger.(®è¢ıüÿÿÿÿ
+N	java:S106j"9Replace this use of System.out or System.err by a logger.(ªìá¶
+¡
+java:S1130q"…Remove the declaration of thrown exception 'com.proyecto.tfg.exception.NotFoundException', as it cannot be thrown from method's body.(ÃÅç£ùÿÿÿÿ
+N	java:S106Š"9Replace this use of System.out or System.err by a logger.(±õ½$

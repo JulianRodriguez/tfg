@@ -1,0 +1,104 @@
+spring:
+  thymeleaf:
+    enabled: false
+  profile: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/tfg?useSSL=false
+    username: root
+    password: root
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    time-zone: UTC
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    #      ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false # property to avoid clob warning
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # property to avoid clob warning
+
+
+#spring:
+#  thymeleaf:
+#    enabled: false
+#  profile: local
+#  cloud:
+#    gcp:
+#  proyect−id: tfg-back
+#  sql:
+#    database−name: tfg
+#    instance−connection−name: tfg-back:europe-west6:tfg-back
+#  datasource:
+#    username: ubuntuserver
+#    password: ubuntuserver
+#  jackson:
+#    serialization:
+#      WRITE_DATES_AS_TIMESTAMPS: false
+#    time-zone: UTC
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create-drop
+#    #      ddl-auto: update
+#    properties:
+#      hibernate:
+#        temp:
+#          use_jdbc_metadata_defaults: false # property to avoid clob warning
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # property to avoid clob warning
+#
+
+
+
+#    LOCAL
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/tfg?useSSL=false
+#    username: ubuntuserver
+#    password: ubuntuserver
+
+#    CLOUD
+#    datasource:
+#      url: jdbc:mysql://34.65.68.159:3306/tfg?useSSL=false
+#      username: ubuntuserver
+#      password: ubuntuserver
+
+#  cloud:
+#    gcp:
+#  proyect−id: tfg-back
+#  sql:
+#    database−name: tfg
+#    instance−connection−name: tfg-back:europe-west6:tfg-back
+#  datasource:
+#    username: ubuntuserver
+#    password: ubuntuserver
+
+
+
+
+#redis:
+#  host: localhost
+#  port: 6379
+#  pass:
+#---
+#
+#spring:
+#  profiles: container
+#  datasource:
+#    url: jdbc:postgresql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DB}
+#    username: ${DATABASE_USER}
+#    password: ${DATABASE_PASSWORD}
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        temp:
+#          use_jdbc_metadata_defaults: false
+#    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+#redis:
+#  host: ${REDIS_HOST}
+#  port: ${REDIS_PORT}
+#  pass: ${REDIS_PASS}

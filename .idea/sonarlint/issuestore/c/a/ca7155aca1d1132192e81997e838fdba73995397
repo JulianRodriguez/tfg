@@ -1,0 +1,28 @@
+
+>
+java:S1148N"#Use a logger to log this exception.(Ä…‘Ö˝ˇˇˇˇ
+|
+java:S1488%"fImmediately return this expression instead of assigning it to the temporary variable "totaldeProduct".(«ã¡©
+É
+java:S1488>"mImmediately return this expression instead of assigning it to the temporary variable "totaldeProductsSearch".(–¸æù
+v
+java:S1488V"`Immediately return this expression instead of assigning it to the temporary variable "modelDto".(πΩ„Ø
+c
+java:S1128"HRemove this unused import 'com.proyecto.tfg.dto.product.ProductEditDTO'.(ı«¥Ã˘ˇˇˇˇ
+e
+java:S1128"JRemove this unused import 'com.proyecto.tfg.dto.restaurant.RestaurantDTO'.(˛©Ñ°¸ˇˇˇˇ
+S
+java:S1128">Remove this unused import 'com.proyecto.tfg.model.Restaurant'.(˝ßìQ
+ú
+java:S1130$"ÖRemove the declaration of thrown exception 'com.proyecto.tfg.exception.NotFoundException', as it cannot be thrown from method's body.(œ“Ì·
+Y
+java:S18548"CRemove this useless assignment to local variable "totalRestaurant".(ù£„ﬂ
+°
+java:S1130="ÖRemove the declaration of thrown exception 'com.proyecto.tfg.exception.NotFoundException', as it cannot be thrown from method's body.(√≈Á£˘ˇˇˇˇ
+P
+java:S1161D":Add the "@Override" annotation above this method signature(–¢´¬
+P
+java:S1161T":Add the "@Override" annotation above this method signature(®…Ï‘
+J
+java:S14818"4Remove this unused "totalRestaurant" local variable.(ù£„ﬂ
+V	java:S125"<This block of commented-out lines of code should be removed.(˘ªñ–¯ˇˇˇˇ

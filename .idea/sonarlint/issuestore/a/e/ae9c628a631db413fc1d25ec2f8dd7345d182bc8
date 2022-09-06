@@ -1,0 +1,16 @@
+
+W
+java:S22598"AA "NullPointerException" could be thrown; "dto" is nullable here.(òÝßÄ
+o
+java:S1488-"YImmediately return this expression instead of assigning it to the temporary variable "p".(¤Ë¿¼
+d
+java:S1128"IRemove this unused import 'com.proyecto.tfg.exception.NotFoundException'.(æ˜ªùÿÿÿÿÿ
+u
+java:S1128"ZRemove this unused import 'com.proyecto.tfg.component.mapper.restaurant.RestaurantMapper'.(§ñè‚úÿÿÿÿ
+e
+java:S1128"JRemove this unused import 'com.proyecto.tfg.dto.restaurant.RestaurantDTO'.(þ©„¡üÿÿÿÿ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+Q	java:S125!"<This block of commented-out lines of code should be removed.(»”š¡
+Q	java:S125%"<This block of commented-out lines of code should be removed.(üÊÊç
+V	java:S125."<This block of commented-out lines of code should be removed.(úÎ›Ûøÿÿÿÿ

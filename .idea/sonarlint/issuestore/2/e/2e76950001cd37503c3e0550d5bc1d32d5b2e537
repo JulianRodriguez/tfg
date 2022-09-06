@@ -1,0 +1,7 @@
+
+v
+java:S1488["`Immediately return this expression instead of assigning it to the temporary variable "product2".(‚¿²
+T
+java:S18546">Remove this useless assignment to local variable "restaurant".(Å€ˆ
+E
+java:S14816"/Remove this unused "restaurant" local variable.(Å€ˆ

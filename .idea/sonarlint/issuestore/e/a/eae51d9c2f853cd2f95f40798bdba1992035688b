@@ -1,0 +1,21 @@
+
+E
+java:S5411S"*Use the primitive boolean expression here.(χϊ—›ωÿÿÿÿ
+Y
+java:S1128"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Α¨ολ
+†
+java:S1128"pRemove this unused import 'org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler'.(Ψ°Ò
+X
+java:S1128"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ψ©Ή…
+_
+java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶―ψ¦ϊÿÿÿÿ
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(μι–²ϋÿÿÿÿ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(†½”λ
+O
+java:S47191"9Replace charset name argument with StandardCharsets.UTF_8(κ¨ΐ΅
+_
+java:S1854S"DRemove this useless assignment to local variable "statusConnection".(χϊ—›ωÿÿÿÿ
+N	java:S106]"9Replace this use of System.out or System.err by a logger.(ξ«¨ύ
+S	java:S106`"9Replace this use of System.out or System.err by a logger.(δ»—Ϊύÿÿÿÿ
+P
+java:S1481S"5Remove this unused "statusConnection" local variable.(χϊ—›ωÿÿÿÿ

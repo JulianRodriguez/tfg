@@ -1,0 +1,10 @@
+
+r
+java:S1128"\Remove this unused import 'org.springframework.security.web.util.matcher.AndRequestMatcher'.(¿¥Ñ“
+p
+java:S1128"ZRemove this unused import 'org.springframework.web.cors.reactive.CorsConfigurationSource'.(Ó»ÎÂ
+o
+java:S1128"YRemove this unused import 'org.springframework.security.web.firewall.StrictHttpFirewall'.(Á—Ìæ
+Q	java:S125<"<This block of commented-out lines of code should be removed.(°âÆá
+V	java:S125v"<This block of commented-out lines of code should be removed.(Þ«Î©øÿÿÿÿ
+Q	java:S125{"<This block of commented-out lines of code should be removed.(ßâ½™

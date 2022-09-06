@@ -1,0 +1,21 @@
+
+J
+java:S1066,"/Merge this if statement with the enclosing one.(õ›ûÙøÿÿÿÿ
+E
+java:S5411,"*Use the primitive boolean expression here.(õ›ûÙøÿÿÿÿ
+k
+java:S1450"URemove the "valido" field and declare it as a local variable in the relevant methods.(œ„é¥
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(ªìá¶
+S	java:S1066"9Replace this use of System.out or System.err by a logger.(¾´“¸ÿÿÿÿÿ
+I
+java:S1068".Remove this unused "properties" private field.(šñ²Ùøÿÿÿÿ
+F
+java:S1068"+Remove this unused "session" private field.(ÔÂòáÿÿÿÿÿ
+B
+java:S1068",Remove this unused "username" private field.(ÙóÊÖ
+A
+java:S1068"+Remove this unused "toEmail" private field.(Êç¿
+G
+java:S1068",Remove this unused "password" private field.(‹àÁÿÿÿÿÿ
+@
+java:S1068"*Remove this unused "valido" private field.(œ„é¥

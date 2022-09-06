@@ -1,0 +1,8 @@
+
+\
+java:S1854;"ARemove this useless assignment to local variable "totalProducts".(¾©ªÕúÿÿÿÿ
+¢
+java:S11303"‹Remove the declaration of thrown exception 'com.proyecto.tfg.exception.InvalidRequestException', as it cannot be thrown from method's body.(ãÑÈö
+M
+java:S1481;"2Remove this unused "totalProducts" local variable.(¾©ªÕúÿÿÿÿ
+Q	java:S125'"<This block of commented-out lines of code should be removed.(ŽåÊß

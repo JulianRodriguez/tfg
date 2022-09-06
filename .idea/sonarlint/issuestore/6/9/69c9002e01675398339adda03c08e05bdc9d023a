@@ -1,0 +1,37 @@
+
+t
+java:S14884"^Immediately return this expression instead of assigning it to the temporary variable "result".(”Ñš¥
+Y
+java:S1128">Remove this unused import 'com.proyecto.tfg.dto.user.UserDTO'.(éÉñ¸ûÿÿÿÿ
+\
+java:S1128"FRemove this unused import 'com.proyecto.tfg.service.user.UserService'.(íØ‡
+N
+java:S1128"8Remove this unused import 'com.proyecto.tfg.model.User'.(ãĞ²ó
+]
+java:S1128"GRemove this unused import 'org.springframework.mail.SimpleMailMessage'.(€·ÊŒ
+H
+java:S1128"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ
+\
+java:S1128
+"ARemove this unused import 'org.apache.commons.lang3.StringUtils'.(Øœ¼ºúÿÿÿÿ
+R
+java:S1128"7Remove this unused import 'java.security.SecureRandom'.(›éè™úÿÿÿÿ
+J
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ
+c
+java:S1128	"HRemove this unused import 'org.apache.commons.codec.digest.DigestUtils'.(¦×½Éşÿÿÿÿ
+N	java:S1063"9Replace this use of System.out or System.err by a logger.(ªìá¶
+I
+java:S1068".Remove this unused "properties" private field.(šñ²Ùøÿÿÿÿ
+F
+java:S1068"+Remove this unused "session" private field.(ÔÂòáÿÿÿÿÿ
+B
+java:S1068 ",Remove this unused "username" private field.(ÙóÊÖ
+A
+java:S1068!"+Remove this unused "toEmail" private field.(Êç¿
+G
+java:S1068#",Remove this unused "password" private field.(‹àÁÿÿÿÿÿ
+@
+java:S1068%"*Remove this unused "valido" private field.(œ„é¥
+A
+java:S1068'"+Remove this unused "symbols" private field.(àš

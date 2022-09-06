@@ -1,0 +1,31 @@
+
+t
+java:S1488("YImmediately return this expression instead of assigning it to the temporary variable "u".(÷¶Õšùÿÿÿÿ
+Y
+java:S1128">Remove this unused import 'com.proyecto.tfg.dto.user.UserDTO'.(éÉñ¸ûÿÿÿÿ
+C
+java:S1128"-Remove this unused import 'java.util.Base64'.(ëŠ»Õ
+W
+java:S1128"ARemove this unused import 'java.io.UnsupportedEncodingException'.(Ãµ…“
+m
+java:S2737+"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û
+N	java:S1066"9Replace this use of System.out or System.err by a logger.(­š¬
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(¥Ÿüùÿÿÿÿ
+M	java:S1068"9Replace this use of System.out or System.err by a logger.(Éd
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(ÆÇÍûÿÿÿÿ
+S	java:S106Z"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ
+W
+java:S1126["AReplace this if-then-else statement by a single return statement.(¦£´ş
+W
+java:S1126g"AReplace this if-then-else statement by a single return statement.(¦£´ş
+\
+java:S1126v"AReplace this if-then-else statement by a single return statement.(ÂÌåşÿÿÿÿ
+T	java:S106 "9Replace this use of System.out or System.err by a logger.(÷€ıãÿÿÿÿÿ
+O	java:S106¡"9Replace this use of System.out or System.err by a logger.(´òÍü
+F
+java:S1481e"+Remove this unused "valido" local variable.(ï±½Æıÿÿÿÿ
+L
+java:S1068"1Remove this unused "LONGTEXTBASIC" private field.(¹‰ÆŞşÿÿÿÿ
+R	java:S125‚"<This block of commented-out lines of code should be removed.(î¥´
+W	java:S125„"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+W	java:S125´"<This block of commented-out lines of code should be removed.(£–Ñ§ÿÿÿÿÿ

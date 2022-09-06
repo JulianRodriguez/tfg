@@ -1,0 +1,23 @@
+
+
+java:S1488 "iImmediately return this expression instead of assigning it to the temporary variable "totaldeRestaurant".(µ£ÛÕ
+…
+java:S1488&"oImmediately return this expression instead of assigning it to the temporary variable "totaldeRestaurantSearch".(®Á¨Ñ
+|
+java:S1488K"fImmediately return this expression instead of assigning it to the temporary variable "totaldeProduct".(Ú¯¹§
+Y
+java:S1128">Remove this unused import 'com.proyecto.tfg.dto.user.UserDTO'.(éÉñ¸ûÿÿÿÿ
+œ
+java:S1130"…Remove the declaration of thrown exception 'com.proyecto.tfg.exception.NotFoundException', as it cannot be thrown from method's body.(ÏÒíá
+¡
+java:S1130%"…Remove the declaration of thrown exception 'com.proyecto.tfg.exception.NotFoundException', as it cannot be thrown from method's body.(ÃÅç£ùÿÿÿÿ
+Y
+java:S18549"CRemove this useless assignment to local variable "totalRestaurant".(À‘™œ
+U
+java:S1161>":Add the "@Override" annotation above this method signature(ÄÉ•áüÿÿÿÿ
+S	java:S106B"9Replace this use of System.out or System.err by a logger.(®è¢ıüÿÿÿÿ
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(ªìá¶
+¡
+java:S1130J"…Remove the declaration of thrown exception 'com.proyecto.tfg.exception.NotFoundException', as it cannot be thrown from method's body.(ÓÔéøÿÿÿÿ
+J
+java:S14819"4Remove this unused "totalRestaurant" local variable.(À‘™œ

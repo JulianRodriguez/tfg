@@ -1,0 +1,13 @@
+
+Y
+java:S1854="CRemove this useless assignment to local variable "totalRestaurant".(À‘™œ
+N	java:S1066"9Replace this use of System.out or System.err by a logger.( Ùý„
+S	java:S106:"9Replace this use of System.out or System.err by a logger.(Ú²öëùÿÿÿÿ
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(¡î·š
+J
+java:S1481="4Remove this unused "totalRestaurant" local variable.(À‘™œ
+V	java:S125"<This block of commented-out lines of code should be removed.(£÷’¯øÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Ó‰ƒ…
+P	java:S125!"<This block of commented-out lines of code should be removed.(ÿÊ÷
+V	java:S125/"<This block of commented-out lines of code should be removed.(“Â“¯øÿÿÿÿ
+V	java:S125I"<This block of commented-out lines of code should be removed.(·ƒŽ°üÿÿÿÿ

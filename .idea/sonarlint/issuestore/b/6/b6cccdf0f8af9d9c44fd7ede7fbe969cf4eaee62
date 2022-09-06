@@ -1,0 +1,9 @@
+
+k	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½÷ú¡ùÿÿÿÿ
+K
+java:S1854R"5Remove this useless assignment to local variable "u".(û½ò
+<
+java:S1481R"&Remove this unused "u" local variable.(û½ò
+Q	java:S125-"<This block of commented-out lines of code should be removed.(×Ğà¾
+Q	java:S125/"<This block of commented-out lines of code should be removed.(¿´äÏ
+V	java:S125?"<This block of commented-out lines of code should be removed.(Ä€¹Öøÿÿÿÿ
