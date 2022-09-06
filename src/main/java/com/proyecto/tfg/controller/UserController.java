@@ -64,7 +64,6 @@ public class UserController {
 		return userMapper.modelToDto(users);
 	}
 
-	@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true")
 	@GetMapping("/total")
 	public Long findTotal() throws NotFoundException {
 		final Long totaldeUser = userService.usertotal();
