@@ -67,11 +67,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //	    	.exceptionHandling()
 //	    	.authenticationEntryPoint(restAuthenticationEntryPoint);
 //
-//		http
-//                .authorizeRequests()
-//                .antMatchers(HttpMethod.POST, "/login").permitAll()
-//                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-//                .antMatchers(HttpMethod.POST, "/logout").permitAll()
+		http
+                .authorizeRequests()
+                .antMatchers(HttpMethod.POST, "/login").permitAll()
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                .antMatchers(HttpMethod.POST, "/logout").permitAll();
 //
 //                .antMatchers(HttpMethod.GET, URLRESTAURANT).hasAuthority("GET_RESTAURANT")
 //                .antMatchers(HttpMethod.GET, URLRESTAURANT + ID).hasAuthority("GET_RESTAURANT")
