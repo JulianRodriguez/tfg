@@ -63,6 +63,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.and()
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	}
+
+	@Bean
+	public HttpFirewall allowUrlEncodedSlashHttpFirewall() {
+		StrictHttpFirewall firewall = new StrictHttpFirewall();
+		firewall.setAllowUrlEncodedSlash(true);
+		return firewall;
+	}
+
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+		//@formatter:off
+		super.configure(web);
+		web.httpFirewall(allowUrlEncodedSlashHttpFirewall());
+	}
+
 	  
 //	@Override
 //	protected void configure(HttpSecurity http) throws Exception {
