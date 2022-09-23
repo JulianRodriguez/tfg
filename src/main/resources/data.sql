@@ -80,7 +80,7 @@ insert into USER VALUES
 (46,'JosepGiraltAguirre@gmail.com',NULL,'Dan Manzano-Uriarte','5ac62a7418439de27c2ec67ab81d44873bf495de','43524312443',NULL,'JosepGiraltAguirre',3),
 (47,'MiguelGasnBall@gmail.com',NULL,'Julia del Cid','5dd4d69d354570983569ef2547742fb976ada4f4','43524312444',NULL,'MiguelGascónBallesteros',3),
 (48,'BuenaventuradelMateu@gmail.com',NULL,'Ofelia Paniagua Novoa','106322620a472b863c68ee9a1b825cfdff9cc81e','43524312445',NULL,'BuenaventuradelMateu',3),
-(49,'RoxanaNildaPacheco@gmail.com',NULL,'Josep Giralt Aguirre','45e37da6044635896138fae1da31e7a9201c5a9f','43524312446',NULL,'RoxanaNildaPacheco',3),
+(49,'RoxanaNildaPacheco@gmail.com',NULL,'Josep Giralt Aguirre','45e37da6044635896138fae1da31e7a9201c5a9f','43524312446',NULL,'RoxanaNildaPacheco',3);
 
 
 -- RESTAURANTES
