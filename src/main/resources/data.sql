@@ -100,7 +100,7 @@ insert into USER VALUES
 (66,'ElviraSaritaGalan@gmail.com',NULL,'Olga Ainoa Hoyos Gras','c7c76dd9105aeddcb1a9f918aab379695ddf9b11','43524312463',NULL,'ElviraSaritaGalan',3),
 (67,'YolandaTéllezMacarenaCrespiAuraGimenezLlopis@gmail.com',NULL,'Samu Javier Mariscal Soto','962b76554eb6850e9d88bceb28214f154f9f3cfc','43524312464',NULL,'YolandaTéllezMacarenaCrespiAuraGimenezLlopis',3),
 (68,'AngélicaTomasaEscalona@gmail.com',NULL,'Heraclio Benavent','945d4c6ab9dab7b3878db92b5736c7bdcdcd92e1','43524312465',NULL,'AngélicaTomasaEscalona',3),
-(69,'DionisiaIbáñezHeribertoAndrésAlberto@gmail.com',NULL,'Hernando Morell Ponce','39cebfad161e838026b367a33659e709a3bc8b6b','43524312466',NULL,'DionisiaIbáñezHeribertoAndrésAlberto',3),
+(69,'DionisiaIbáñezHeribertoAndrésAlberto@gmail.com',NULL,'Hernando Morell once','39cebfad161e838026b367a33659e709a3bc8b6b','43524312466',NULL,'DionisiaIbáñezHeribertoAndrésAlberto',3),
 (70,'NataliaBárcenaBlazquez@gmail.com',NULL,'Elvira Sarita Galan Agudo','20eabe5d64b0e216796e834f52d61fd0b70332fc','43524312467',NULL,'NataliaBárcenaBlazquez',3),
 (71,'CeciliaIñiguezSevilla@gmail.com',NULL,'Yolanda Téllez','c7b6b845668130956f8768d3f1ce3d391ca881d6','43524312468',NULL,'CeciliaIñiguezSevilla',3),
 (72,'SanchoAntónRoldán@gmail.com',NULL,'Macarena Crespi','99e2b89f3cda731add47da0c4a7698c1e4c80ba3','43524312469',NULL,'SanchoAntónRoldán',3),
@@ -126,14 +126,6 @@ insert into USER VALUES
 (92,'LuciodelFlores@gmail.com',NULL,'Berto Jerónimo Chaparro Aguilar','38d9bb273c4a3e62828ea7f5a457bebb2cb3907a','43524312489',NULL,'LuciodelFlores',3),
 (93,'SaloméFiolGuerra@gmail.com',NULL,'Pacífica Asensio','0e5948d753c47382ff6a7082690068aa48a3f526','43524312490',NULL,'SaloméFiolGuerra',3),
 (94,'VascoBalaguerAlemany@gmail.com',NULL,'Ibán Peralta Muñoz','2c626821d23dc24adcb01145f47bafe0600fe228','43524312491',NULL,'VascoBalaguerAlemany',3),
-(95,'ArielMurilloMacías@gmail.com',NULL,'Ariel Murillo Macías','5a50aaa04c17d1b28891048972d2ca76cd07274a','43524312492',NULL,'ArielMurilloMacías',3),
-(96,'ObduliadeMartí@gmail.com',NULL,'Obdulia de Martí','c59a01c355f7c831fa8e0adfd90a7b40fbe8f3f0','43524312493',NULL,'ObduliadeMartí',3),
-(97,'GracianaCamposRosa@gmail.com',NULL,'Graciana Campos Rosa','f56ddcca10c8b10f4e68963e55144c238633da1f','43524312494',NULL,'GracianaCamposRosa',3),
-(98,'TereCidPrats@gmail.com',NULL,'Tere Cid Prats','8b85431c99883ba0058eacdd61e0bacb0387cade','43524312495',NULL,'TereCidPrats',3),
-(99,'PalomaOsorioNaranjo@gmail.com',NULL,'Paloma Osorio Naranjo','509bd310f2c1d048097531d559ff990be9fe2245','43524312496',NULL,'PalomaOsorioNaranjo',3),
-(100,'ModestoFiguerolaAlbero@gmail.com',NULL,'Modesto Figuerola Albero','d05c863dc6e186cb73b63a682063db5c7dc53fd2','43524312497',NULL,'ModestoFiguerolaAlbero',3),
-(101,'LuciodelFlores@gmail.com',NULL,'Lucio del Flores','83cf808502640dc4c88d03a3d05f6b48e04ade71','43524312498',NULL,'LuciodelFlores',3),
-(102,'SaloméFiolGuerra@gmail.com',NULL,'Salomé Fiol Guerra','ffffa921a44c8611cf12a5a0277c4238d4a63749','43524312499',NULL,'SaloméFiolGuerra',3);
 
 
 
