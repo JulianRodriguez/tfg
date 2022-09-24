@@ -33,7 +33,7 @@ INSERT INTO ROLE_PRIVILEGE VALUES (1,1),(1,2),(1,3),(1,5),(1,6),(1,7),(1,8),(1,9
 -- USUARIOS
 insert into USER VALUES
 (1,'tfg.qr.julian@gmail.com',NULL,'Julian Rodriguez Carave','7c4a8d09ca3762af61e59520943dc26494f8941b','667884995',NULL,'admin',1),
-(2,'sarazarzu@gmail.com',NULL,'Sara Zaruela','7c4a8d09ca3762af61e59520943dc26494f8941b','435243124',NULL,'sarita04',2),
+(2,'sarazarzu@yopmail.com',NULL,'Sara Zaruela','7c4a8d09ca3762af61e59520943dc26494f8941b','435243124',NULL,'sarita04',2),
 (3,'Paco@gmail.com',NULL,'Paco Perez','5b1d5b1569de26f631ba3edf0d89f65be5af4e3d','4352431240',NULL,'Pacome0',3),
 (4,'ElianaAragonsValle@gmail.com',NULL,'Eliana Aragonés Valle','ede927f8e42318a8db02c0f74adc2d9e16770339','4352431241',NULL,'ElianaAragonésValle',3),
 (5,'AscensinPeraltaBoix@gmail.com',NULL,'Ascensión Peralta Boix','72571665d1184a5889ec08a1ea4c6345b35634f0','4352431242',NULL,'AscensiónPeraltaBoix',3),
