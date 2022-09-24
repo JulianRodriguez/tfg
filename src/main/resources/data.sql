@@ -61,26 +61,8 @@ insert into USER VALUES
 (27,'ChusTamaritManso@gmail.com',NULL,'Tadeo Escolano-Carpio','039e8fdcb3d3155ddfec3a1c0e9f52034a17711f','43524312424',NULL,'ChusTamaritManso',3),
 (28,'MaiteManceboGel@gmail.com',NULL,'Javier Montalbán Santamaria','27308bd77fd29dcea72ce8faa8acce46ea45bf8b','43524312425',NULL,'MaiteManceboGelabert',3),
 (29,'AurelianoVerdas@gmail.com',NULL,'Mireia Tomas Lillo','95ab63767029bd0c91d44a862412fb1984ceed9c','43524312426',NULL,'AurelianoVerdugoCasanovas',3),
-(30,'CarmelaIsidoraRibas@gmail.com',NULL,'Chus Tamarit Manso','6e3cebef0b01fd781b708209335f3dbc74cadf07','43524312427',NULL,'CarmelaIsidoraRibas',3),
-(31,'EricOlivaresSantana@gmail.com',NULL,'Maite Mancebo Gelabert','c4e2e3a68a2652d2c391ff526d1599fbb5e0e3af','43524312428',NULL,'EricOlivaresSantana',3),
-(32,'DeliaMartnezRosa@gmail.com',NULL,'Aureliano Verdugo Casanovas','d01e4d651814818e53012f9cf749a90188c9c18a','43524312429',NULL,'DeliaMartínezRosa',3),
-(33,'OdalisCarvajalVilar@gmail.com',NULL,'Carmela Isidora Ribas Seguí','15978e8c9badc812db4db01f5405e04040a4fb6b','43524312430',NULL,'OdalisCarvajalVilar',3),
-(34,'MelaniaMadrigal@gmail.com',NULL,'Eric Olivares Santana','9ca04420cf960f8b4c0bc619beea7bea2959dc6e','43524312431',NULL,'MelaniaMadrigalCastejón',3),
-(35,'JulietadelVilla@gmail.com',NULL,'Delia Martínez Rosa','81868001a48855bd64142a29c4252f27c8ca223b','43524312432',NULL,'JulietadelVilla',3),
-(36,'MaraCarmenVelasco@gmail.com',NULL,'Odalis Carvajal Vilar','f802e1202f3baa681bb70c1dbae45467fbef3267','43524312433',NULL,'MaríaCarmenVelasco',3),
-(37,'AgustnBruCañas@gmail.com',NULL,'Melania Madrigal Castejón','ab74e24b757ec71be3196014d5a2c0eb13eda8bb','43524312434',NULL,'AgustínBruCañas',3),
-(38,'OrianadeBarragn@gmail.com',NULL,'Julieta del Villa','da188ce199e8de796fbee414fd02bc8a8a2e6632','43524312435',NULL,'OrianadeBarragán',3),
-(39,'rsulaFabreg@gmail.com',NULL,'María Carmen Velasco Maldonado','6bf91eb1cdb46b7d1598ab13201ec92bb6bf5241','43524312436',NULL,'ÚrsulaFabregatSerrano',3),
-(40,'IkerAnacletoCriado@gmail.com',NULL,'Agustín Bru Cañas','c22cbd2eaddd48cbfade60fbfdbad9f314d40cad','43524312437',NULL,'IkerAnacletoCriado',3),
-(41,'TeodoroCampsPont@gmail.com',NULL,'Oriana de Barragán','c1eba8b0a58e5407625e414a10b21c91fe0a97bf','43524312438',NULL,'TeodoroCampsPont',3),
-(42,'OfeliaCifuentesSolera@gmail.com',NULL,'Úrsula Fabregat Serrano','e33442db320571d3eaf360a43f82c9040ef653f0','43524312439',NULL,'OfeliaCifuentesSolera',3),
-(43,'DanManzanoUriarte@gmail.com',NULL,'Iker Anacleto Criado Estevez','e7f863b29a81e30e465d59a62e90a956f8b0365b','43524312440',NULL,'DanManzanoUriarte',3),
-(44,'JuliadelCid@gmail.com',NULL,'Teodoro Camps Pont','970e5c8d8950c9d4666c6714bca7713c4538317e','43524312441',NULL,'JuliadelCid',3),
-(45,'OfeliaPaniaguaNovoa@gmail.com',NULL,'Ofelia Cifuentes Solera','a88499a60e4f39d5cd0b0478051d51da23281b36','43524312442',NULL,'OfeliaPaniaguaNovoa',3),
-(46,'JosepGiraltAguirre@gmail.com',NULL,'Dan Manzano-Uriarte','5ac62a7418439de27c2ec67ab81d44873bf495de','43524312443',NULL,'JosepGiraltAguirre',3),
-(47,'MiguelGasnBall@gmail.com',NULL,'Julia del Cid','5dd4d69d354570983569ef2547742fb976ada4f4','43524312444',NULL,'MiguelGascónBallesteros',3),
-(48,'BuenaventuradelMateu@gmail.com',NULL,'Ofelia Paniagua Novoa','106322620a472b863c68ee9a1b825cfdff9cc81e','43524312445',NULL,'BuenaventuradelMateu',3),
-(49,'RoxanaNildaPacheco@gmail.com',NULL,'Josep Giralt Aguirre','45e37da6044635896138fae1da31e7a9201c5a9f','43524312446',NULL,'RoxanaNildaPacheco',3);
+(30,'CarmelaIsidoraRibas@gmail.com',NULL,'Chus Tamarit Manso','6e3cebef0b01fd781b708209335f3dbc74cadf07','43524312427',NULL,'CarmelaIsidoraRibas',3);
+
 
 
 -- RESTAURANTES
