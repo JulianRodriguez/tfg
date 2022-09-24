@@ -67,13 +67,13 @@ insert into USER VALUES
 
 -- RESTAURANTES
 INSERT INTO RESTAURANT VALUES
-(1,'Comida rápida Americana','McDonald',1),
-(2,'Cerveza artesanal y tapas variadas','La Pepa',2),
-(3,'Comida rápida copia de McDonald','BurgerKing',2);
+(1,'Restaurante romántico con cocina andaluza creativa y repostería casera','Restaurante El Faro',2),
+(2,'Tradicional bodega local con vino jerez, que ofrece visitas guiadas y catas.','Bodega Tío Pepe',2),
+(3,'Restaurante en el corazón de las Bodegas Tío Pepe','Restaurante Pedro Nolasco',3);
 
 -- PRODUCTOS
 INSERT INTO PRODUCT VALUES
-(1,'Plato de arroz muy rico. Hecho en cai','Paella Mixta',NULL,1,1),
-(2,'Famosa hamburguesa tipica de aqui','Hamburguesa de queso',NULL,2,2),
-(3,'carnecita muy rica','Carrillada',NULL,2,2),
-(4,'bbb','Salchicha',NULL,3,3);
+(1,'"Septiembre refrescante": Whisky, arándanos y limón.','El cóctel de El Faro',NULL,1,1),
+(2,'Procedente de la destilación de vinos y con un proceso de crianza único, estamos ante un espirituoso de una nobleza y carácter difícilmente comparables.','Brandy de Jerez',NULL,2,2),
+(3,'Infinitos en edad pero finitos en vida, estos vinos fueron deliberadamente “olvidados” en nuestras bodegas para, también deliberadamente, redescubrirlos hoy. ','Vinos Finitos',NULL,2,2),
+(4,' realizados por el horno La Cremita de Chiclana, rellenos de pringá que se acompañan con unos pequeños vasos de caldo del puchero aromatizados con el famoso amontillado Viña AB de González Byass. La pringá no se presenta de la forma habitual, sino con la carne de cerdo deshilachada al estilo del pulled pork americano y aromatizada con especias.','Brioche de berza con vistas a la Catedral',NULL,3,3);

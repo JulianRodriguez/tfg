@@ -7,8 +7,11 @@ import com.proyecto.tfg.service.user.UserService;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 
 import javax.mail.Session;
@@ -34,8 +37,32 @@ public class EmailServiceImpl implements EmailService {
     @Autowired
     UserService userService;
 
-    @Autowired
-    private JavaMailSender javaMailSender;
+
+    @Value("${spring.mail.host}")
+    private String host;
+    @Value("${spring.mail.port}")
+    private String port;
+    @Value("${spring.mail.username}")
+    private String user;
+    @Value("${spring.mail.password}")
+    private String pass;
+
+    private JavaMailSender buildJavaMailSender() {
+        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+        mailSender.setHost(host);
+        mailSender.setPort(Integer.valueOf(port));
+        mailSender.setUsername(user);
+        mailSender.setPassword(pass);
+        Properties mailProps = mailSender.getJavaMailProperties();
+        mailProps.put("mail.smtps.auth", "true");
+        mailProps.put("mail.smtp.starttls.enable", "true");
+        mailProps.put("mail.smtp.debug", "true");
+        mailProps.put("mail.smtp.starttls.required", "true");
+        mailProps.put("mail.smtp.ssl.protocols", "TLSv1.2");
+        mailProps.put("mail.smtp.ssl.trust", "*");
+        mailProps.put("mail.smtp.ssl.enable", "true");
+        return mailSender;
+    }
 
     public boolean sendSimpleMail(EmailDTO dto) throws NotFoundException, NoSuchAlgorithmException {
         System.out.println(dto);
@@ -71,7 +98,7 @@ public class EmailServiceImpl implements EmailService {
 
 
                     // Sending the mail
-                    javaMailSender.send(mailMessage);
+                    buildJavaMailSender().send(mailMessage);
                     return true;
                 } catch (Exception e) {
                     e.getMessage();
