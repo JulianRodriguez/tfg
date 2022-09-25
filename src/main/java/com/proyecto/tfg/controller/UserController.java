@@ -73,16 +73,11 @@ public class UserController {
     @PutMapping("/setPass")
     public boolean setPass(@RequestBody UserPostDTO dto) throws NotFoundException, InvalidRequestException{
 
-        System.out.println("Imprimo el dto");
-        System.out.println(dto);
         if(dto.getIdUser() == null)
             throw new InvalidRequestException("No se ha recibido el id");
         final User user = userService.getAndCheck(dto.getIdUser());
-        System.out.println("Imprimo el user");
-        System.out.println(user.getPassword());
 		String encryptPassword = Optional.ofNullable(dto.getPassword()).map(DigestUtils::sha1Hex).orElse(StringUtils.EMPTY);
         user.setPassword(encryptPassword);
-        System.out.println("Imprimo el dto");
         userService.update(user);
         return true;
 
